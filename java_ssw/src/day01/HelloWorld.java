@@ -9,6 +9,6 @@ public class HelloWorld {
 		 * 여러줄 주석, 기능(메소드)을 설명할 때 활용
 		 */
 		System.out.println("Hello world!"); // 콘솔에 원하는 값을 출력하는 기능
-		
+		System.out.println("수정");
 	}
 }
