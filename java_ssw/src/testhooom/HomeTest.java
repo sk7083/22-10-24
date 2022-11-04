@@ -67,5 +67,21 @@ public class HomeTest {
 		System.out.println(num+" 값이 arr[]안에 존재하지 않습니다.");
 		return false;
 	}
-//=========================================================================	
+//=========================================================================
+	public static void printMenu(String ... strs) {
+		for(int i = 0; i< strs.length; i++) {
+			/*
+			System.out.print(strs[i]);
+			if (i != strs.length - 1) {
+				//마지막이 아닐 경우 
+				System.out.println();
+			} */
+			System.out.print(strs[i] + (i!= strs.length-1?"\n": ""));
+			//위 주석을 이 한줄로 조건 선택 연산자로 구현 가능
+		}
+	}
+	
+	
+//=========================================================================
+
 }
