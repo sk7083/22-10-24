@@ -48,13 +48,17 @@ public class BaskinRobbins31 {
 	            for(int i = 0; i<comIndex; i++){
 	                num = num+1;
 	                if(i<comIndex-1){
-	                    System.out.print(num +" , " );
+	                	if(comIndex == 1) {
+		                    System.out.print(num);
+	                	}else {
+	                		System.out.print(num +" , " );	
+	                	}
 	                }else{
 	                    System.out.print(num);
 	                }
 	                
 	                if(num == lastNum){
-	                    System.out.println("컴퓨터 패배!");
+	                    System.out.println("\n컴퓨터 패배!");
 	                    return 1;
 	                }
 	            }
@@ -68,6 +72,9 @@ public class BaskinRobbins31 {
 	                for(int p=0; p<playerIndex; p++){
 	                    num = num+1;
 	                    if(p<playerIndex-1){
+	                    	if(playerIndex == 0){
+	                    		System.out.print(num);	
+	                    	}
 	                        System.out.print(num +" , " );
 	                    }else{
 	                        System.out.print(num);
