@@ -2,7 +2,7 @@ package day09;
 
 import java.util.Scanner;
 
-public class StudentManager {
+public class StudentManager{
 
 	public static void main(String[] args) {
 		/* 메뉴
