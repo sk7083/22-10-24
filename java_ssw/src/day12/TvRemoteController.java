@@ -1,8 +1,6 @@
 package day12;
 
-interface TvRemoteController {
-
-
+interface TvRemoteController{
 	//전원 켜기
 	//void turnOn();
 	//전원 끄기

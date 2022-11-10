@@ -16,9 +16,9 @@ public class LombokTest {
 	}
 
 }
-@Data	//@Getter, @Setter, @ToString, @EqualsAndHashCode, @RequiredArgsConstructor
-		//가 포함되어있음
+
+ //@Getter, @Setter, @ToString, @EqualsAndHashCode, @RequiredArgsConstructor 가 포함되어있음
+@Data
 class TestA{
 	private int num;
-	
 }
