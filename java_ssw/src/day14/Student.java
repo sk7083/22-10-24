@@ -89,6 +89,18 @@ public class Student {
 		}
 
 	}
+
+
+	public int getGrade() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+
+	public Object getClassNum() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 	//메소드 : getter / setter, equals() : 같은 객체인지 비교하기 위해
