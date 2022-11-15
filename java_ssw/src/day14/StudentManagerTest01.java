@@ -12,7 +12,7 @@ public class StudentManagerTest01 {
 		 * */
 		/* TvRemoteController remocon1 = new TvremoconA();*/
 
-		Scanner sc = new Scanner(System.in);
+	/*	Scanner sc = new Scanner(System.in);
 		ArrayList<Student> stds = new ArrayList<Student>();
 		int menu = -1;
 		while (menu != 4) {
@@ -146,8 +146,9 @@ public class StudentManagerTest01 {
 		System.out.println("=============================================================");
 		System.out.println();
 		System.out.println("메뉴를 선택해주세요 : ");		
-		
+		*/
 	}
+	
 }
 
 //================================================================
