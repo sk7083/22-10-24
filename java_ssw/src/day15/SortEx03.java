@@ -18,8 +18,9 @@ public class SortEx03 {
 		list.add(new Student(1, 3, 3));
 		list.add(new Student(1, 1, 1));
 		System.out.println(list);
-		Collections.sort(list, new Comparator<Student>() {
+	//	Collections.sort(list, new Comparator<Student>() {
 
+			/*
 			@Override
 			public int compare(Student o1, Student o2) {
 				if(o1.getGrade() != o2.getGrade()) {
@@ -30,12 +31,13 @@ public class SortEx03 {
 				}
 				return o1.getNum() - o2.getNum();
 			}
-		
+		*/
 			
 		
 		
-		});
+	//	}); 
 		System.out.println(list);
+		
 	}
 
 }
