@@ -6,6 +6,9 @@ public class AccountBookMain {
 
 	public static void main(String[] args) {
 		AccountBook ab = new AccountBook(new Scanner(System.in));
+		//객체를 생성 후(new)  생성자 AccountBook를 호출. 하지만 괄호 안에 (new Scanner)를 호출
+		//main -> AccountBook -> Scanner	// 메소드 스택
+		
 		ab.run();
 
 	}
