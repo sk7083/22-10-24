@@ -2,6 +2,8 @@ package day14;
 
 import java.util.ArrayList;
 
+import lombok.Data;
+@Data
 public class Student {
 	//필드(필요한 정보) : 학년, 반, 번호, 이름, 성적들
 	private int grade;
