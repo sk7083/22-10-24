@@ -6,10 +6,13 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.Scanner;
+import java.util.function.Predicate;
 
 import javax.management.RuntimeErrorException;
 
 import com.sun.security.auth.login.ConfigFile;
+
+import day19.Student;
 
 public class AccountServiceImp implements AccountService{
 
@@ -277,6 +280,7 @@ public class AccountServiceImp implements AccountService{
 		case 2:
 			year = inputYear(scan);
 			printItem(list, year);
+			//printItem(list, (s)->s
 			break;
 		case 3:
 			year = inputYear(scan);
@@ -289,9 +293,11 @@ public class AccountServiceImp implements AccountService{
 			day = inputDay(scan);
 			printItem(list, year, month, day);
 			break;
+		
 		default:
 		}
 		
 	}
 	
+
 }
