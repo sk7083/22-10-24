@@ -1,7 +1,7 @@
 package studyWeek;
 
 public class Step01 {
-	//아파트 문제 배열
+	//아파트 문제
 	
 	//1. (1층 아파트)10개의 호수가 있는 건물에 호마다 입주하고있는 인원수 출력
 	
