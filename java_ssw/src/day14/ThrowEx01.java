@@ -1,8 +1,11 @@
 package day14;
 
+
 public class ThrowEx01 {
 
 	public static void main(String[] args) {
+		
+		
 		/* throws 예외 : 메소드가 실행됐을 때, 발생할 수 있는 예외를 표시
 		 * 			여러개 가능
 		 * 			RuntimeException과 자식 예외 클래스들은 생략 가능
@@ -18,7 +21,7 @@ public class ThrowEx01 {
 			System.out.println("예외 발생");
 		}
 	}
-
+	
 	public static int mod(int num1, int num2) throws ArithmeticException {
 		return num1 % num2;
 	}

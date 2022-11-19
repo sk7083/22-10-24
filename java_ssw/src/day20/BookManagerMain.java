@@ -74,6 +74,7 @@ public class BookManagerMain {
 				list.add(book);
 				System.out.println("도서 추가가 완료됐습니다.");
 				System.out.println("===================");
+				
 				break;
 			case 2:
 				//선택 메뉴가 2번이면 도서 조회
