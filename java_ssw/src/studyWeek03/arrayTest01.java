@@ -9,12 +9,24 @@ public class arrayTest01 {
 	public static void main(String[] args) {
 		ArrayList<String> arr01 = new ArrayList<String>();
 		int iStr = 1;
+		//List arr01에 iStr의 값을 넣으려했으나, arr01 타입은 String이기에
+		//정수타입인 iStr을 String.valueOf(iStr)을 이용하여 String타입으로 변환
+		//이후 arr01.add(iStr)을 통하여 리스트에 저장.
 		arr01.add(String.valueOf(iStr));
-		arr01.get(0);
-		
-		
+		//get(int index)은 인자로 인덱스를 받습니다.
+		// 괄호 안에 (0)은 0 인덱스번호에 리스트 값을 의미.
+		//위에서 iStr을 넣엇기에, 0번 인덱스의 값은 1이다.
+		arr01.get(0);	//리스트의 (int index)괄호 안 해당 인덱스의 값을 불러옴
+		arr01.add(1, "1번지에 넣음");
+		System.out.println(arr01);
+		System.out.println("================================");
+		//List 타입이 class<Student>인 arr02라는 이름을 가진 리스트 생성
 		ArrayList<Student> arr02 = new ArrayList<Student>();
+		//Student라는 class를 사용하기 위해 메모리상에 인스턴스하여
+		//래퍼런스 변수(메모리 상에 생성된 인스턴스를 가리킴) 현재는 stu를 이용하여
+		//Student class를 사용
 		Student stu = new Student();
+		
 		stu.setNum(1);
 		stu.setName("오");
 		arr02.add(stu);
