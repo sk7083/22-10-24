@@ -108,38 +108,26 @@ public class AttendanceMain {
 	}
 //=================================================================
 	private static void studnetInfo(ArrayList<Student> list) {
-		System.out.println("=========학생 정보를 수정합니다.=========");
-			for (Student tmp : list) {
-				System.out.println("==============학생 명단================");
-				System.out.println(tmp);
-				System.out.println("==================================");
-				System.out.println("학생의 이름과 생년월일을 입력해주세요.");
-
-				System.out.println("이름 입력 : ");
-				String name = sc.next();
-				System.out.println("생년월일 입력 : ");
-				String birth = sc.next();
-				System.out.println("==================================");
-
-				if (tmp.getName().equals(name) && tmp.getBirth().equals(birth)) {
-					System.out.println("수정할 학생의 이름과 생년월일 입력해주세요.");
-					System.out.println("==================================");
-
-					sc.nextLine();
-					System.out.println("수정할 이름 입력 : ");
-					String newName = sc.nextLine();
-					System.out.println("수정할 생년월일 입력 : ");
-					String newBirth = sc.nextLine();
-
-					tmp.setName(newName);
-					tmp.setBirth(newBirth);
-					System.out.println("수정된 정보 : " + tmp);
-				} else {
-					System.out.println("해당 학생은 존재하지 않습니다.");
-				}
-
-			}
-		
+		//등록된 학생 정보를 불러온다.
+		System.out.println("==============학생 명단==============");
+		studentInfoList(list);
+		System.out.println("==================================");
+		//등록된 학생 중 수정이 필요한 학생를 선택
+		System.out.println("수정할 학생의 번호를 입력해주세요.");
+		int num = sc.nextInt();
+		System.out.println(list.get(num-1));
+		System.out.println();
+		//선택한 학생의 정보를 수정 작업
+		System.out.println("수정할 이름 입력 : ");
+		String name = sc.next();
+		System.out.println("수정할 생년월일 입력 : ");
+		String birth = sc.next();
+		//수정한 학생 정보 등록
+		list.get(num-1).setName(name);
+		list.get(num-1).setBirth(birth);
+		//수정 완료
+		System.out.println("수정이 완료되었습니다.");
+		System.out.println(list.get(num-1));
 	}
 
 //=================================================================
@@ -147,7 +135,7 @@ public class AttendanceMain {
 		//학생 정보 출력
 		for(int i = 0; i<list.size(); i++) {
 			//list에 입력된 학생 정보 모두 출력
-			System.out.println(list.get(i));
+			System.out.println(i+1+". "+list.get(i));
 		}
 	}
 	
