@@ -58,17 +58,15 @@ public class AttendanceMain {
 			menu = sc.nextInt();
 			switch(menu) {
 			case 0:
-				System.out.println("등록된 학생 확인해보겠습니다");
-				studentInfoList(list);
+				studentInfoList(list);	//등록된 학생 명단
 				break;
 			case 1:
 				// 1. 학생 등록
-				insertStudent(list);
+				insertStudent(list);	//학생 등록하는 메소드
 				break;
 			case 2:
 				// 2. 학생 수정
-				//studentInfoList(list);	//학생 정보 모두 출력
-				studnetInfo(list);
+				studnetInfo(list);	//학생 정보 수정하는 메소드
 				break;
 			case 3:
 //				3. 학생 삭제
@@ -107,35 +105,45 @@ public class AttendanceMain {
 		} while (menu != 9);
 	}
 //=================================================================
+	//등록된 학생의 정보를 수정하는 메소드
 	private static void studnetInfo(ArrayList<Student> list) {
 		//등록된 학생 정보를 불러온다.
-		System.out.println("==============학생 명단==============");
 		studentInfoList(list);
 		System.out.println("==================================");
 		//등록된 학생 중 수정이 필요한 학생를 선택
-		System.out.println("수정할 학생의 번호를 입력해주세요.");
-		int num = sc.nextInt();
-		System.out.println(list.get(num-1));
-		System.out.println();
-		//선택한 학생의 정보를 수정 작업
-		System.out.println("수정할 이름 입력 : ");
+		System.out.println("=========수정할 학생 정보 입력==========");
+		System.out.println("이름 입력 : ");
 		String name = sc.next();
-		System.out.println("수정할 생년월일 입력 : ");
+		System.out.println("생년월일 입력 : ");
 		String birth = sc.next();
+		Student stu = new Student(name, birth);
+		//선택한 학생의 정보를 수정 작업
+		if (stu.getName().equals(name)) {
+			System.out.println("=========학생 정보 수정==========");
+		} else {
+			System.out.println("해당 학생은 존재하지 않습니다.");
+			return;
+		}
+		System.out.println("이름 입력 : ");
+		String pname = sc.next();
+		System.out.println("생년월일 입력 : ");
+		String pbirth = sc.next();
 		//수정한 학생 정보 등록
-		list.get(num-1).setName(name);
-		list.get(num-1).setBirth(birth);
+		stu.setName(pname);
+		stu.setBirth(pbirth);
 		//수정 완료
 		System.out.println("수정이 완료되었습니다.");
-		System.out.println(list.get(num-1));
+		System.out.println(list);
+
 	}
 
 //=================================================================
 	private static void studentInfoList(ArrayList<Student> list) {
 		//학생 정보 출력
+		System.out.println("==============학생 명단==============");
 		for(int i = 0; i<list.size(); i++) {
 			//list에 입력된 학생 정보 모두 출력
-			System.out.println(i+1+". "+list.get(i));
+			System.out.println(list.get(i));
 		}
 	}
 	
@@ -164,7 +172,7 @@ public class AttendanceMain {
 		System.out.print("7. 출석 삭제  |");
 		System.out.print(" 8. 날짜별 출석 확인  |");
 		System.out.print(" 9. 프로그램 종료  |");
-		System.out.println(" 0. 등록된 학생 확인");
+		System.out.println(" 0. 등록된 학생 명단");
 		System.out.println("==================================");
 	}
 //=================================================================
