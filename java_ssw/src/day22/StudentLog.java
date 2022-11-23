@@ -5,11 +5,11 @@ import lombok.Data;
 @Data
 public class StudentLog {
 
-	private String name, information;
+	private String name, birth;
 
 	
-	public StudentLog(String name, String information) {
+	public StudentLog(String name, String birth) {
 		this.name = name;
-		this.information = information;
+		this.birth = birth;
 	}
 }
