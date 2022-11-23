@@ -10,6 +10,7 @@ public class AttendanceMain {
 	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		ArrayList <Student> list = new ArrayList<Student>();
+		int index =0;
 		/* 출석부 관리 프로그램
 		 * 1. 학생 등록
 		 * - 이름과 생년월일
@@ -66,7 +67,7 @@ public class AttendanceMain {
 				break;
 			case 2:
 				// 2. 학생 수정
-				studnetInfo(list);	//학생 정보 수정하는 메소드
+				studnetInfo(list, index);	//학생 정보 수정하는 메소드
 				break;
 			case 3:
 //				3. 학생 삭제
@@ -106,7 +107,7 @@ public class AttendanceMain {
 	}
 //=================================================================
 	//등록된 학생의 정보를 수정하는 메소드
-	private static void studnetInfo(ArrayList<Student> list) {
+	private static ArrayList<Student> studnetInfo(ArrayList<Student> list, int index) {
 		//등록된 학생 정보를 불러온다.
 		studentInfoList(list);
 		System.out.println("==================================");
@@ -118,22 +119,37 @@ public class AttendanceMain {
 		String birth = sc.next();
 		Student stu = new Student(name, birth);
 		//선택한 학생의 정보를 수정 작업
+		
+		
 		if (stu.getName().equals(name)) {
+			
+			stu.getName().indexOf(name);
+			System.out.println("index 값 : "+index);
 			System.out.println("=========학생 정보 수정==========");
+			System.out.println("이름 입력 : ");
+			String pname = sc.next();
+			System.out.println("생년월일 입력 : ");
+			String pbirth = sc.next();
+			Student stu1 = new Student(pname, pbirth);
+			list.set(index, stu1);
+			System.out.println(list);
+			//뭘 넣을껀데?
+			//내가 입력한 name / birth
+			//어디에?
+			//이름이 같은 값을 내가 새로 입력한 name과 birth에 넣을꺼야
+			
+			//수정한 학생 정보 등록
+			
+			//수정 완료
+			System.out.println("수정이 완료되었습니다.");
+			System.out.println(list);
+			return list;
 		} else {
 			System.out.println("해당 학생은 존재하지 않습니다.");
-			return;
+			return null;
 		}
-		System.out.println("이름 입력 : ");
-		String pname = sc.next();
-		System.out.println("생년월일 입력 : ");
-		String pbirth = sc.next();
-		//수정한 학생 정보 등록
-		stu.setName(pname);
-		stu.setBirth(pbirth);
-		//수정 완료
-		System.out.println("수정이 완료되었습니다.");
-		System.out.println(list);
+
+
 
 	}
 
