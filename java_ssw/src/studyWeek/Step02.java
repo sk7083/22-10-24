@@ -11,7 +11,7 @@ public class Step02 {
 
 	public void name() {
 		Step01 s1 = new Step01();
-		plus(s1);
+		plus(s1, 0, null, null);
 	
 	}
 	
