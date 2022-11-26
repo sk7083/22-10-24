@@ -8,7 +8,7 @@ import javax.management.RuntimeErrorException;
 
 
 
-public class StudentMain {
+public class StudentMain02 {
 public static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		/* 학생 정보를 관리 프로그램을 작성하세요.
@@ -21,20 +21,37 @@ public static Scanner sc = new Scanner(System.in);
 		 * */
 		//inputStream
 //===================================================	
-			String fileName = "student.txt";
+		int data = 0;
+//		try {
+//			File file = new File("sunwoo.txt");
+//			FileOutputStream fos = new FileOutputStream(file);
+//			  while((data = System.in.read()) != -1) {
+//	                // 입력받은 내용을 파일 내용으로 기록한다.
+//	                fos.write(data);
+	                
 			ArrayList<Student> list = new ArrayList<Student>();
 			int menu = 0;
-			
-			load(list, fileName);
+
+			// load(list, );
 			do {
 				printMenu(menu);
+				
 				menu = sc.nextInt();
 				runMenu(list, menu);
-				
-			} while(menu != 3);
-			save(list, fileName);
-//===================================================		
+//===================================================
+
+//				fos.write(runMenu(list, menu));
+			} while (menu != 3);
 	}
+			// save(list, fileName);
+//			fos.close();
+//===================================================		
+//		} catch (FileNotFoundException e) {
+//			e.printStackTrace();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+//	}
 	private static void runMenu(ArrayList<Student> list, int menu) {
 		switch (menu) {
 		case 1:
@@ -48,6 +65,8 @@ public static Scanner sc = new Scanner(System.in);
 		case 3:
 			System.out.println("프로그램을 종료합니다.");
 			break;
+		case 4:
+			printList(list);
 		default:
 			System.out.println("잘못된 입력입니다.");
 		}
@@ -89,43 +108,16 @@ public static Scanner sc = new Scanner(System.in);
 		System.out.println("===============메뉴===============");
 		System.out.print("1. 학생 추가  |");
 		System.out.print(" 2. 학생 출력  |");
-		System.out.println(" 3. 종료");
+		System.out.print(" 3. 종료  |");
+		System.out.println(" 4. Test");
 	}
 	
-	private static void save(ArrayList<Student> list, String fileName) {
-		if(list == null)
-			throw new RuntimeException("예외 : 등록된 학생이 없습니다");
-	
-		try(ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(fileName))) {
-			for(Student std : list) {
-				oos.writeObject(std);
-			}
-			System.out.println("저장하기 완료.");
-		} catch (FileNotFoundException e) {
-			System.out.println(fileName + "을 생성할 수 없어서 저장에 실패했습니다.");
-		} catch (IOException e) {
-			System.out.println("저장에 실패했습니다.");
+	public static void printList(ArrayList<Student> list) {
+		for(int i =0; i<list.size(); i++) {
+			System.out.println(list.get(i));
 		}
 	}
 	
-	private static void load(ArrayList<Student> list, String fileName) {
-		if(list == null)
-			throw new RuntimeException("예외 : 등록된 학생이 없습니다");
-	
-		try(ObjectInputStream ois = 
-				new ObjectInputStream(new FileInputStream(fileName))) {
-			while(true) {
-				Student std = (Student)ois.readObject();
-				list.add(std);
-			}
-		} catch (FileNotFoundException e) {
-			System.out.println(fileName + "이 없어서 불러오기에 실패했습니다.");
-		} catch(EOFException e) {
-			System.out.println("불러오기 완료");
-		} catch (Exception e) {
-			System.out.println("불러오기 실패");
-		} 
-		
-	}
+
 	
 }
