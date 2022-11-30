@@ -2,24 +2,30 @@ package day27;
 
 public class Member {
 	private String name, phone, pw, id;
-	private int birth;
+	private int birth, grade;
 	
 	public Member() {
 		
 	}
 
-	public Member(String name, String phone, String pw, String id, int birth) {
+	public Member(String name, String phone, String pw, String id, int birth, int grade) {
 		this.name = name;
 		this.phone = phone;
 		this.pw = pw;
 		this.id = id;
 		this.birth = birth;
+		this.grade = grade;
 	}
 
-	public Member(String pw, String id) {
-		this.pw = pw;
-		this.id = id;
+	public int getGrade() {
+		return grade;
 	}
+
+	public void setGrade(int grade) {
+		this.grade = grade;
+	}
+
+
 
 	public String getPhone() {
 		return phone;
@@ -63,7 +69,7 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "name : " + name +"\n"+"phone :" + phone+"\n" + "pw : " + pw+"\n" + "id : " + id +"\n"+ "birth : " + birth+"\n";
+		return "\n"+"이름 : " + name +"\n"+ "ID : " +id+"\n" + "PW : " + pw+"\n"+"전화번호 :" + phone+"\n" + "생년월일 : " + birth+"\n"+"등급 : "+grade+"\n"+"===================================="+"\n";
 	}
 	
 	
