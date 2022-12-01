@@ -27,16 +27,17 @@ public class Manager {
 	
 	@Override
 	public String toString() {
-		return " category=" + category + "]";
+		return "카테고리 : " + category + "]";
 	}
 
 	public static ArrayList<Manager> addCategory(ArrayList<Manager> categoryList) {
-		System.out.println("카테고리명 : ");
+		System.out.println("카테고리명 : (자유 게시판 등) ");
 		String category = sc.nextLine();
 		
 		Manager cateList = new Manager(num+". "+category);
 		categoryList.add(cateList);
 		num++;
+		System.out.println("확인용 : "+categoryList);
 		return categoryList;
 	}
 	

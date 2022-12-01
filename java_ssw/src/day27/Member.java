@@ -69,7 +69,7 @@ public class Member {
 
 	@Override
 	public String toString() {
-		return "\n"+"이름 : " + name +"\n"+ "ID : " +id+"\n" + "PW : " + pw+"\n"+"전화번호 :" + phone+"\n" + "생년월일 : " + birth+"\n"+"등급 : "+grade+"\n"+"===================================="+"\n";
+		return "\n"+"이름 : " + name +"\n"+ "ID : " +id+"\n" + "PW : " + pw+"\n"+"전화번호 :" + phone+"\n" + "생년월일 : " + birth+"\n"+"등급 : "+grade+"\n"+"====================================";
 	}
 	
 	
