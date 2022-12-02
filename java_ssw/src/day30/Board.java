@@ -53,7 +53,7 @@ public class Board {
 	}
 	@Override
 	public String toString() {
-		return "num : " + num +" | "+"title : " + title +" | "+ "writer : " + writer+"\n"+"====================================";
+		return "\n"+"num : " + num +" | "+"title : " + title +" | "+ "writer : " + writer+"\n"+"====================================";
 	}
 	public int getNum() {
 		return num;
@@ -80,5 +80,11 @@ public class Board {
 		this.writer = writer;
 	}
 
+	public void print() {
+		System.out.println("번호 : " + num);
+		System.out.println("제목 : " + title);
+		System.out.println("작성자 : " + writer);
+		System.out.println("내용 : " + content);
+	}
 
 }
