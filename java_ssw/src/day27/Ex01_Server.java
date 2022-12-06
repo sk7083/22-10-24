@@ -16,7 +16,7 @@ public class Ex01_Server {
 
 		try {
 			serverSocket = new ServerSocket();
-			serverSocket.bind(new InetSocketAddress(5001));
+			serverSocket.bind(new InetSocketAddress("IP주소/도메인명",5001));
 			System.out.println("[서버 시작]");
 			while (true) {
 				
