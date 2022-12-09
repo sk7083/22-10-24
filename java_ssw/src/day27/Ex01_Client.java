@@ -4,17 +4,19 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
 import java.net.Socket;
+import java.net.SocketAddress;
 import java.util.Scanner;
 
 public class Ex01_Client {
 
 	public static void main(String[] args) {
 		Socket socket = null;
-		
+		String ip = "192.168.20.34";
 		try {
-			socket = new Socket();
+			socket = new Socket("localhost", 5001);
 			System.out.println("[연결 시도 중]");
-			socket.connect(new InetSocketAddress("localhost", 5001));
+			socket.connect(new InetSocketAddress(ip, 5001));
+			//socket.connect(ip, 5001);
 			System.out.println("[연결 성공]");
 			send(socket, null);
 			recieve(socket);
