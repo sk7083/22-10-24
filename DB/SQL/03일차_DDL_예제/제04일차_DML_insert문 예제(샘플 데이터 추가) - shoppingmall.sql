@@ -28,9 +28,15 @@ select * from product;
 -- 이 때 실행되야하는 쿼리를 작성하세요.
 -- buy 테이블 - insert문
 -- product 테이블 - update문
-create table buy
-(bu_num varchar(20),
-
+create table buy(
+bu_num varchar(20) primary key not null,
+bu_state varchar(20) not null,
+bu_amount int not null,
+bu_address varchar(20) not null,
+bu_post_num int not null,
+bu_me_id varchar(20) not null,
+bu_pr_num int not null
+);
 
 insert into buy(bu_num, bu_state, bu_amount, bu_address, bu_post_num, bu_me_id, bu_pr_num)
 values('abc1', '결재완료', 1, '서울시 강남', '12345', 'abc', 1);
