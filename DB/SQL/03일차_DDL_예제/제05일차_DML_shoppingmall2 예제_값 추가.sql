@@ -30,6 +30,7 @@ INSERT INTO `small_jik`.`member` (`me_id`, `me_pw`, `me_name`, `me_birth`, `me_a
 */
 
 insert into main_category (mc_name) values ('의류'), ('식품'), ('가전'), ('스포츠'),('문구');
+
 insert into sub_category(sc_name, sc_mc_num)
 	select '여성', mc_num from main_category where mc_name = '의류';
 insert into sub_category(sc_name, sc_mc_num)
