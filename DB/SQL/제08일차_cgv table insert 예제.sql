@@ -150,6 +150,7 @@ insert into seat(se_name, se_state, se_ci_num, se_price) values
 ('A1', '사용가능', 6, 10000), ('A2', '사용가능', 6, 10000), ('A3', '사용가능', 6, 10000), 
 ('A4', '사용가능', 6, 10000), ('B1', '사용가능', 6, 10000), ('B2', '사용가능', 6, 10000), 
 ('B3', '사용가능', 6, 10000), ('B4', '사용가능', 6, 10000), ('C1', '사용가능', 6, 10000), 
+<<<<<<< HEAD
 ('C2', '사용가능', 6, 10000);
 
 -- 회원 가입
@@ -170,6 +171,13 @@ insert into ticketing_seat(ts_ti_num, ts_se_num)
 update screen_schedule
 	set ss_possible_seat = ss_possible_seat - 2
     where ss_num = 5;
+=======
+('C2', '사용가능', 6, 10000), 
+
+
+
+
+>>>>>>> main
 
 
 
