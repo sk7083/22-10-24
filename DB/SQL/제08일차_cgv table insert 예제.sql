@@ -40,10 +40,11 @@ insert into movie_casting(mc_mp_num, mc_mo_num, mc_role)
 			,(2, 1, '배우'),(3,1,'배우'),(4, 1, '배우'),(5, 1, '배우'),(6, 1, '배우')
 			,(7, 1, '배우'),(8, 1, '배우');
 -- 트레일러 등록
-insert into trailer (tr_title, tr_mo_num, tr_file_name)
-	values('[아바타-물의 길] 환상적인 판도라의 세계 영상', 1, '');
+insert into trailer(tr_title, tr_file_name, tr_mo_num)
+values('[올빼미]박스오피스 1위 리뷰 예고편','http://h.vod.cgv.co.kr:80/vodCGVa/86481/86481_210223_1200_128_960_540.mp4',2);
 -- 스틸컷 등록
-insert into stillcut(st_mo_num, st_file_name) values(1, '');
+insert into stillcut(st_file_name, st_mo_num)
+values('https://img.cgv.co.kr/Movie/Thumbnail/StillCut/000086/86481/86481210724_727.jpg', 2);
 
 -- 지역 등록
 insert into region values('서울'),('경기'),('인천'),('강원'),('대전/충청'),('대구')
