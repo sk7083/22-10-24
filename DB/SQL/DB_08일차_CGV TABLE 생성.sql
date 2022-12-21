@@ -140,8 +140,8 @@ DROP TABLE IF EXISTS `ticketing_seat`;
 
 CREATE TABLE `ticketing_seat` (
 	`ts_num`	int auto_increment	NOT NULL primary key,
-	`ti_num`	int NOT NULL,
-	`se_num`	int NOT NULL
+	`ts_ti_num`	int NOT NULL,
+	`ts_se_num`	int NOT NULL
 );
 
 ALTER TABLE `movie_casting` ADD CONSTRAINT `FK_movie_person_TO_movie_casting_1` FOREIGN KEY (
