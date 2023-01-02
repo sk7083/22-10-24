@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 태그 예제</title>
+</head>
+<body>
+    <!-- 넷상에 F12를 통해 영상 주소를 가져와도 가능하며
+    현재 아래에선 영상을 다운 후 img 폴더에 파일을 넣고 불러온 예제이다.
+    controls : 실행 (필수)
+    autoplay : 자동으로 실행된다
+-->
+    <video src="../img/video.mp4" controls autoplay>    
+    </video>
+
+    <!-- 위와 결과는 동일-->
+    <video controls autoplay>
+        <source src="../img/video.mp4" type="video/mp4">
+    </video>
+</body>
+</html>

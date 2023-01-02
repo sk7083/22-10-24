@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 태그 예제</title>
+</head>
+<body>
+<!--
+    width : 가로
+    height : 높이
+    - 기본 픽셀 단위.
+    - auto : 비율에 맞게 크기를 조절. 보통 가로 또는 세로 하나만 지정 한 후,
+            다른 속성에 auto를 추가하여 이미지 비율이 깨지지 않게 함.
+-->
+
+    <!-- input:image 타입이 존재
+    src : 이미지 주소
+    alt : 이미지 없는 경우 화면에 입력한 문구를 출력 
+    
+    -->
+
+    <!-- 넷상에서 이미지 주소 복사를 통해 가져온 경우
+    -->
+    <input type="image" src="data:image/jpeg;base64,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" alt="고양이"> <br>
+    
+
+    <!-- 절대 경로 방법 : 최상위 폴더를 기준으로 경로를 탐색
+        - root폴더(최상위 폴더) : (현재)html 폴더
+        - / 로 시작
+        - 최상위 폴더가 바뀌면 문제가 발생
+    -->
+    <input width="300" height="auto" type="image" src="/img/asd.webp" alt="고양이"> <br>
+    
+
+    <!-- 상대 경로 방법 : 현재 파일 위치를 기준으로 탐색
+        - 최상위 폴더가 바뀌어도 문제가 안됨.
+        - .. : 상위 폴더로 이동
+        - ./ : 현재 폴더
+    -->
+    <input width="300" height="300" type="image" src="../img/asd.webp" alt="고양이"> <br>
+    <!--
+        input타입이 아닌 img 타입으로 할 경우 이미지에 커서를 갖다댓을 경우
+        커서 형태 그대로 남음.
+    -->
+    <img width="300" height="300"  src="../img/asd.webp" alt="고양이"> <br>
+</body>
+</html>

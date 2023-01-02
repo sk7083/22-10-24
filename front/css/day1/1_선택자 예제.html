@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 예제</title>
+    <!--
+        [css 선택자]
+
+        전체 선택자 : *
+        태그 선택자 : 태그(h1,p,li 등)
+        아이디 선택자 : #아이디명
+        클래스 선택자 : .클래스명
+        후손 선택자 : 선택자 선택자
+        자식 선택자 : 선택자 > 선택자
+        속성 선택자 : 
+        동위 선택자 :
+    -->
+    <style>
+        *{ color: red; }
+        div{ background-color: yellow;}
+        #name{ font-weight: bold;}
+        .bar{ text-decoration: none;}
+        body div{}
+        body > div{}
+        input[type=text]{}
+    </style>
+</head>
+<body>
+    <div>안녕</div>
+    <p id="name">내 이름은 홍길동</p>
+    <a href="http://naver.com" class="bar">네이버로 이동</a>
+    <!-- 
+        .box : box 이름의 class 생성
+        #box : box 이름의 id 생성
+    -->
+    .box
+</body>
+</html>
