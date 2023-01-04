@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 3등분 예제</title>
+    <style>
+        /* 내가 풀이한 예제
+        .allbox{
+            background-color: green; border: 1px solid black;
+            width: 200px; height: 100px;
+        }
+
+        .box1{
+            float: left; background-color: red;
+            width: 33.3%; height: 100px;
+        }
+        .box2{
+            float: right; background-color: gray;
+            width: 33.3%; height: 100px;
+        }
+        */
+
+        /* 교수 풀이*/
+        *{ margin: 0;}
+        .container-box{
+            border: 5px solid red;
+        }
+        .container-box::after{
+            content: ''; clear: both; display: block;
+        }
+        .box{
+            height: 100px; width: 33.33%; background: yellow;
+            float: left;
+        }
+        /* 첫번째 .box다음부터 적용 (즉, box1은 적용안됨)
+            margin(공백)을 이용하여 밀렷던 5px만큼 다시 늘려줌*/
+        .box~.box{ 
+            border-left: 5px solid red; margin-left: -5px;
+        }
+
+        .box2{
+            background: gray;
+           
+        }
+        .box3{
+            background: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- 내가 풀이한 예제
+    <div class="allbox">3
+    <div class="box box1">1</div>
+    <div class="box box2">2</div>
+    <div class="box box3"></div>
+    </div>
+-->
+
+<!-- 교수 풀이-->
+
+<!-- div는 block 블락 태그임
+즉 라인 시작-->
+<form action="">
+    <div class="container-box">
+        <div class="box box1">
+                <a href="https://www.naver.com/"
+                target="_blank"
+                style="text-decoration: none;"
+                >1</a>
+        </div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+    </div>
+</form>
+    
+</body>
+</html>

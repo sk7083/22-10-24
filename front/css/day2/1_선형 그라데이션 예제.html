@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>그라데이션 예제</title>
+    <style>
+        .box{ height: 100px; margin-bottom: 30px;}
+        /* deg : 각도 노란색 -> 초록색 45도 각도로 변경하는 예제*/
+        .box1{ background: linear-gradient(45deg, yellow, green);}
+        /* to right로 방향을 써서 조절도 가능 */
+        .box2{ background: linear-gradient(to right, yellow, green);}
+        /* bottom방향으로 노란색30% 초록색 30% 나머지는 파란색으로 변경*/
+        .box3{ background: linear-gradient(to bottom, yellow 30%, green 30%, blue);}
+        .box4{ background: linear-gradient(to bottom, yellow, green, blue);}
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+</body>
+</html>

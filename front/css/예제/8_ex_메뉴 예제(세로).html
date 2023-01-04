@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 예제(세로)</title>
+    <style>
+        .menu-all{
+            list-style: none; padding: 0;
+            border: 3px solid black;
+            width: 10%;
+        }
+
+        .menu-all::after{
+            clear: both; content: ''; display: block;
+        }
+
+        
+        .menu-title{
+            border-bottom: 3px solid black; margin-bottom: -3px;
+            text-align: center;
+        }
+
+        .menu-num{
+           text-decoration: none;
+           color: black;
+          
+        }
+
+        .menu-zero{
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="menu-all">
+            <li class="menu-title">
+                <a href="#" class="menu-num">메뉴 1</a>
+            </li>
+            <li class="menu-title">
+                <a href="#" class="menu-num">메뉴 2</a>
+            </li>
+            <li class="menu-title">
+                <a href="#" class="menu-num">메뉴 3</a>
+            </li>
+            <li class="menu-zero">
+                
+            </li class="menu-title">
+        </ul>
+        
+    </nav>
+</body>
+</html>

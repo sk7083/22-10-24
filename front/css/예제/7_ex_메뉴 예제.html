@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 예제</title>
+    <style>
+        .menu-list{
+            /* list-style: none으로 인해 메뉴 앞에 점을 지움
+            ul태그의 경우 기본적으로 padding이 들어가기에 0으로 리셋*/
+            list-style: none; padding: 0;
+            border: 5px solid red;
+        }
+        /* .menu-list가 메뉴들을 박스형태로 덮을 수 있게 적용*/
+        .menu-list::after{
+            clear: both; content: ''; display: block;
+        }
+        .menu-link{
+            text-decoration: none; color: black;
+            /* display는 부모의 100%이기에 메뉴1,2,3 글자가 아닌 여백을 눌러도
+            메뉴1이 작동하게끔 만듬*/
+            display: block; height: 100%;
+            /*메뉴 위치가 정 가운데로 오게끔 만듬*/
+            text-align: center; line-height: 50px;
+        }
+        .menu-item{
+            float: left; width: 33.33%; height: 50px;
+        }
+        .menu-item + .menu-item{
+            border-left: 5px solid red; margin-left: -5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav 태그 : 기능은 없으며 네비 태그-->
+    <nav>
+        <ul class="menu-list">
+            <li class="menu-item">
+                <a href="http://naver.com" class="menu-link">메뉴1</a>
+            </li>
+            <li class="menu-item">
+                <a href="http://daum.net" class="menu-link">메뉴2</a>
+            </li>
+            <li class="menu-item">
+                <a href="http://gogle.co.kr" class="menu-link">메뉴3</a>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

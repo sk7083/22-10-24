@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 예제</title>
+
+    <!-- Animate.css 사이트에서 이것저것 미리 사용해볼 수 있다.-->
+
+    <style>
+        /* @keyframes 애니메이션명 {
+            0%, from, to 등 사용 가능(애니메이션 진행도){
+
+            }
+            50%(애니메이션 진행도){
+
+            }
+        }
+        */
+        @keyframes color_Red {
+            from{
+                color: red;
+            }
+            50%{
+                color: blue;
+            }
+            to{
+                color: green;
+            }
+        }
+        .box{
+            font-size: 100px; font-weight: 100px;
+            /* animation-name: color_Red; 해당 애니메이션 이름 설정*/
+            animation-name: color_Red;
+            /* animation-duration: 3s; 애니메이션 총 시간*/
+            animation-duration: 3s;
+            /* animation-iteration-count: infinite; 카운터 (현재는 인피니티(무제한) 실행)*/
+            animation-iteration-count: infinite;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="box">안녕하세요</div>
+</body>
+</html>

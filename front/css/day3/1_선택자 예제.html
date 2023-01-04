@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 예제</title>
+    <style>
+        /* 해당 요소의 첫번째로 오는것으로 적용이 되기에
+            class를 사용한 경우엔 적용이 안됨.
+            li태그로 사용했다면 가능*/
+        li:nth-child(2){ color: red;}
+        li:nth-of-type(2){ background-color: green;}
+        .fruit:nth-child(3){ text-decoration: underline;}
+        .fruit:nth-of-type(3){ font-size: 20px;}
+
+        /*부모 요소 즉, p태그를 기준으로 2번째에 있는 p태그1이 빨간색으로 변경*/
+        p:nth-child(2){ color: red;}
+        /*부모 요소 */
+        p:nth-of-type(2){ background-color: gray;}
+    </style>
+</head>
+<body>
+    <!--
+        선택자 : nth-child(숫자)
+            - 부모 요소를 기준으로 숫자번째 자식 요소가 선택자인 요소
+        선택자 : nth-of-type(숫자)
+            - 부모 요소를 기준으로 선택자와 일치하는 요소들 중에서 숫자번째 요소
+    -->
+    <ul>
+        <li class="">사과</li>
+        <li class="fruit">포도</li>
+        <li class="fruit">배</li>
+        <li class="fruit">바나나</li>
+    </ul>
+    <div>
+        <h1>h1태그</h1>
+        <p>p태그1</p>
+        <p>p태그2</p>
+        <p>p태그3</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>투명도 예제</title>
+    <style>
+        .container-box{
+            height: 500px; background: red;
+            padding: 100px;
+             /* opacity : 투명도를 설정 1에 가까울수록 볼투명
+                자식 투명도는 부모의 투명도를 넘을 수 없다. (베이스는 부모 투명도를 따라감) */
+            opacity: 0.9;
+            
+            /* background: rgba(255,0,0,0.5) 를 이용하여
+            부모 혼자만의 투명도를 낮추는 것도 가능*/
+            
+        }
+        .box{
+            height: 200px; background: green;
+            /* opacity : 투명도를 설정 1에 가까울수록 볼투명*/
+            opacity: 0.7; font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-box">
+    <div class="box box1">Hello</div>
+</div>
+</body>
+</html>

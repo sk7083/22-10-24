@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 예제</title>
+    <style>
+         /* Z축 기준 회전하기 위해
+         body에  perspective: 100px; 추가함*/
+        body{
+            perspective: 100px;
+        }
+
+
+        .box{
+            width: 200px; height: 50px;
+            margin: 50px auto;
+            background: red;
+        }
+        /* 우측으로 50px 아래로 10px만큼 움직임*/
+       /* .box1{ transform: translate(50px, 10px); } */
+
+        /* x축으론 2배 y축으론 0.5배 늘림*/
+        .box2{ transform: scale(2, 0.5); } 
+
+        /* Z축 기준 회전*/
+        .box1{ transform: translateZ(20px); }
+
+        /* 90도로 회전*/
+        .box3{ transform: rotate(90deg); }
+
+        /* 요소를 변형시킴 (x축, y축)*/
+        .box4{ transform: skew(45deg, 0deg); }
+
+        /* 해당 요소를 회전시킴 (해당 요소의 가운데 기준)
+        rotateX(X축 회전) rotateY(Y축 회전)   */
+        .box5{ transform: rotateX(45deg); }
+    </style>
+</head>
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+    <div class="box box4"></div>
+    <div class="box box5"></div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>float 예제</title>
+    <style>
+        .box{
+            width: 100px; height: 100px; border: 1px solid #000;
+            float: left;
+        }
+        /*아래의 코드는 공식으로 쓰임
+        
+        float로 인해 글자가 아랫줄로 이동하는게 아니라 바로 옆으로 써지는 경우에 사용*/
+        .container-box::after{
+            clear: both; display: block; content: '';
+        }
+    </style>
+</head>
+<body>
+    <!-- 부모의 높이는 자식의 컨텐츠 높이를 따라감-->
+    <div class="container-box">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+    </div>
+    <div class="container-box">2</div>
+</body>
+</html>

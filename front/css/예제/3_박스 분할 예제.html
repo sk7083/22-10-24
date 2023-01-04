@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 분할 예제</title>
+    <style>
+       
+
+        .box1{
+            width: calc(50% - 5px); height: 100px; background-color: red;
+            float: left;
+        }
+        .box2{
+            width: 100px; height: 100px; background-color: orange;
+            float: right;
+        }
+
+        .allbox::after{
+            display: block; content: ''; clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div class="allbox">
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+</div>
+</body>
+</html>

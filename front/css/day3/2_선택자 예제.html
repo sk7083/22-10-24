@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 예제 hover / focus</title>
+    <style>
+        .box{
+            width: 100px; height: 100px; background-color: gray;
+           /* position: relative; top: 500px; */
+        }
+        /* 마우스를 갖다댓을 경우 색이 초록색으로 변경되는 것을 볼 수 있다.
+            주로 밑줄이 생기게끔 만들게 기능을 구현함*/
+        .box:hover{
+            background: green; 
+        }
+        .container-box{
+            padding: 20px; background: blue;
+        }
+        .inner-box{
+            padding: 20px; background: powderblue;
+        }
+        /* 안쪽 자식 클라스를 마우스 호버할 경우 부모 or 조상 클래스인
+           box, container-box도 같이 호버된 것으로 적용됨 */
+        .container-box:hover{ background: black;}
+        .inner-box:hover{ background: red;}
+/*========================================================================*/
+        /* 클릭(사용)햇을 경우에만 동작하는 focus*/
+        input:focus{
+            background : red;
+        }
+/*========================================================================*/
+        /* 체크 박스를 선택했을 때 동작하는 checked*/
+        input:checked{
+            width: 50px;
+        }
+        /* 체크 박스를 선택했을 때 배경색을 노란색으로 변경*/
+        input:checked+label{
+            background: yellow;
+        }
+        /* not : 아닌 요소 (부정)
+           input:not(#apple) : 아이디가 apple이 아닌 요소들은 백그라운드를 초록으로 변경*/
+        input:not(#apple){
+            background: green;
+        }
+        /* input:not([type=checkbox]) : 타입이 체크박스가 아닌 요소들은 백그라운드를 핑크색으로 변경*/
+        input:not([type=checkbox]){
+            background: pink;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="container-box">
+         <div class="inner-box">
+            <div class="box"></div>
+         </div>
+    </div>
+
+    <input type="text">
+
+    <input type="checkbox" name="" id="apple">
+    <label for="apple">사과</label>
+</body>
+</html>
