@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>검색창 예제</title>
+    <style>
+        *{ padding: 0; margin: 0;}
+        .search-container{
+            /* 안쪽 패딩을 10px로 두었기에, 부모 클래스안에 속해있는 input태그는 자동으로 10px패딩을 준 공간 안에 들어감*/
+            padding: 10px; border: 2px solid green;
+            /* position: relative; 기준점을 세팅*/
+            padding-right: 62px; width: 400px; position: relative;
+            border-radius: 3px;
+        }
+        .search-input{
+            height: 30px; width: 100%; font-size: 18px; border: 0; outline: 0;
+        }
+        .search-btn{
+            /* 검색창을 우측에 붙이기 위해 (border 내부) position: absolute; 사용 */
+            position: absolute; top: -2px; bottom: -2px; right: -2px; width: 52px;
+            /* border를 0으로 둘 경우 테두리가 사라짐*/
+            background: green; border: 0; color: white; font-weight: bold;
+            border-radius: 0 3px 3px 0; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form action="" class="search-container">
+        <input type="text" class="search-input">
+        <button type="submit" class="search-btn">검색</button>
+    </form>
+</body>
+</html>
