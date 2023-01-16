@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시험</title>
+    <style>
+        .main-in-title input{
+            width: 220px;
+        }
+        .main-in{
+            font-weight: bold;
+        }
+        .main-in-title{
+            padding-top: 15px;
+            padding-bottom: 5px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+        .main-in-title .title{
+            float: left; padding-right: 40px;
+        }
+        .main-in-content .content{
+            float: left; padding-right: 40px;
+            margin-top: 10%;
+        }
+        .main-in-uploadFile .file{
+            float: left; padding-right: 8px;
+            margin-bottom: 40px;
+        }
+        .main-in-content{
+            padding-bottom: 5px;
+            padding-left: 20px;
+            font-weight: bold;
+        }
+        .main-in-uploadFile{
+            padding-left: 20px; 
+            font-weight: bold;
+        }
+        .main-in-content input{
+            height: 200px;
+            width: 220px;
+        }
+        .main-in-btn{
+            position: absolute;
+            left: 175px;
+            top: 440px;
+        }
+        .main-in-line1{
+            padding-bottom: 30px;
+        }
+        .main-in-line2{
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+        .main-in-table table th{
+            background-color: orangered; color: white;
+        }
+        .main-in-table table td{
+            background-color: bisque;
+        }
+        .main-in-table table .title{
+            width: 350px;
+        }
+        .main-in-table table .user{
+            width: 120px;
+        }
+        .main-in-table table .day{
+            width: 120px;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <form action="insert.no" method="post">
+        <h1>포트폴리오 문제</h1>
+        <div class="main">
+            <div class="main-in-line1"><hr></div>
+            <fieldset>
+                <legend class="main-all">공지사항 작성하기</legend>
+            
+                <div class="main-in-title">
+                    <div class="title">
+                        제목
+                    </div>
+                    <div class="title-in">
+                        <input type="text" placeholder="제목을 입력하시오.">
+                    </div>
+                </div>
+                <div class="main-in-content">
+                    <div class="content">
+                        내용
+                    </div>
+                    <div class="content-in">
+                        <input type="text" placeholder="제목을 입력하시오.">
+                    </div>
+                </div>
+                <div class="main-in-uploadFile">
+                    <div class="file">첨부파일</div>
+                    <div class="file-in">
+                        <label for="upload_file">
+                            <input type="file" id="upload_file">
+                        </label>
+                    </div>
+
+                </div>
+                <div class="main-in-btn">
+                    <button>작성하기</button>
+                </div>
+            </fieldset>
+            <div class="main-in-line2"><hr></div>
+
+            <div class="main-in-table">
+                <table border="1">
+                    <th>번호</th>
+                    <th colspan="2">제목</th>
+                    <th>작성자</th>
+                    <th>작성일</th>
+                    <th>조회수</th>
+                    <tr>
+                        <td>9</td>
+                        <td class="title">공지사항 제목 9</td>
+                        <td><button style="float: right;">바로가기</button></td>
+                        <td class="user">user01</td>
+                        <td class="day">2021-03-29</td>
+                        <td>34</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td class="title">공지사항 제목 6</td>
+                        <td><button style="float: right;">바로가기</button></td>
+                        <td class="user">answ445</td>
+                        <td class="day">2021-03-12</td>
+                        <td>67</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td class="title">공지사항 제목 3</td>
+                        <td><button style="float: right;">바로가기</button></td>
+                        <td class="user">testg12</td>
+                        <td class="day">2021-03-01</td>
+                        <td>98</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td class="title">공지사항 제목 2</td>
+                        <td><button style="float: right;">바로가기</button></td>
+                        <td class="user">palwe3</td>
+                        <td class="day">2021-01-02</td>
+                        <td>85</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td class="title">공지사항 제목 1</td>
+                        <td><button style="float: right;">바로가기</button></td>
+                        <td class="user">xml23</td>
+                        <td class="day">2020-12-24</td>
+                        <td>124</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" align="center" style="background-color: orangered; color: white;
+                        font-weight: bold;">전체공지사항 갯수</td>
+                        <td colspan="2" align="center" style="background-color: orangered; color: white;
+                        font-weight: bold;">5개</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+
+    </form>
+</body>
+</html>

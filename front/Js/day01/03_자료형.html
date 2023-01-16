@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자료형 예제</title>
+</head>
+<body>
+    <script>
+         /* .log(typeof 변수명) 해당 변수의 타입을 알고자할 때 사용 */
+
+        let num = 10;               //number 타입
+        console.log(typeof num);
+
+        let str = '10.123';          //string 타입
+        console.log(typeof str);
+
+        let str2 = new String('10.123');   //new String을 사용할 경우 object 타입으로 변함
+        console.log(typeof str2);
+
+        let num2;                   //값을 넣지 않을 경우 undefined
+        console.log(typeof num2);   
+
+        let obj = null;               //null값은 object 타입
+        console.log(typeof obj);
+
+        console.log(num2/ 2);       //NaN (숫자가 아님)을 뜻함.
+
+        console.log(typeof (num2 / 2)); //NaN타입도 숫자란 것을 뜻함
+
+        let isEven = true;           //boolean 타입
+        console.log(typeof isEven);
+    </script>
+</body>
+</html>

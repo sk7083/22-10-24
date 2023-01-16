@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연산자 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 연산자 ]
+
+        자바에서 문자열과 정수는 -, / 가 안되지만 자바스크립트에선 가능
+        변수 앞에 +를 붙일 경우 정수로 변환시킴. (전부는 아님 ex : 234,567)
+        숫자로만 이루어진 변수일 경우에만 가능
+        */
+       console.log('6a'/2);     //NaN 숫자가 아닌 것과 숫자랑 나눳기에 NaN이 출력
+       console.log('6'/2);      //3
+
+       console.log(`6' / 2 = ${'6' / 2}`);
+       console.log(`6a' / 2 = ${'6a' / 2}`);
+       console.log(`6' - 2 = ${'6' - 2}`);
+       console.log(`6' * 2 = ${'6' * 2}`);
+       console.log(`6' * 2 = ${'6' ** 2}`);
+
+       /* +연산자는(덧셈 아님) 피연산자를 숫자로 변환 */
+       let num1 = '12', num2 = '34';
+       console.log(`'12' + '34' = ${'12' + '34'}`);
+       // 아래 예제는 유용하게 쓰일 수 있음 (두 가지 방법)
+       console.log(`+'12' + +'34' = ${Number('12') + Number('34')}`);
+       console.log(`+'12' + +'34' = ${+'12' + +'34'}`);
+       
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수 예제 [let]</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 자바 스크립트에서 변수 선언 방법 ]
+        let 변수명;
+        var 변수명;
+          - let 또는 var를 표시하지 않더라도 사용은 가능하지만 추천하지 않음. (ex : num = 10;)
+          - let : 중복 선언 불가능
+          - var : 중복 선언 가능
+
+          [ 상수 선언 ]
+
+          const 상수명 = 값;
+
+        */
+        num = 10;
+        /* log를 사용함에 따라 개발자 코드(f12)+Console를 통해 콘솔창에서 값을 확인 가능 */
+        console.log(num);
+        let num2 = 10;
+        //let num2 = 10;  ->  let 중복 선언으로 인한 오류
+        var num3 = 20;
+        var num3 = 30;  // var 중복 선언 가능 -> ("호이스팅" 때문에 중복이 가능)
+        console.log(num3);
+
+        //상수 선언
+        let ch = '+', num4 = 1;
+        
+
+</script>
+</body>
+</html>
