@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nullish 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        초기 값(age값이) undefined 혹은 null일 경우 
+        nullish로 인해 설정한 20살이 출력됨
+        반면 초기 값을 25로 넣어줌에 따라 결과가 25살로 출력됨
+        */
+        let age = 25;
+        console.log(`제 나이는 ${age??20}살 입니다.`);
+        age = undefined;
+        console.log(`제 나이는 ${age??20}살 입니다.`);
+        age = null;
+        console.log(`제 나이는 ${age??20}살 입니다.`);
+    </script>
+</body>
+</html>

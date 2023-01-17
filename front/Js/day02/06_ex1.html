@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습 예제</title>
+</head>
+<body>
+    <script>
+        /* 알림창을 통해 이름을 입력받고, 입력받은 이름을 알림창에 출력하는 코드를 작성하세요. */
+
+        //prompt('실행 시 입력한 값을 알림창에 출력', '알림창의 기본 값을 세팅');
+
+
+        //let name = prompt('이름을 입력하세요', '홍길동');
+        //console.log(`${name}`);   //콘솔창으로 확인하고자 할 때
+       // alert(name);        //알림창에 결과 값을 띄울 경우.
+
+        /* (1) 알림창을 통해 수를 입력받아 두번 입력받아 두 수의 합을 확인하는 코드를 작성하세요. 
+        (2) 입력한 값이 숫자가 아닌 경우 0으로 대체해서 합을 구하도록 수정*/
+
+        let a1 = prompt('숫자를 입력하세요', '0');
+        let a2 = prompt('숫자를 입력하세요', '0');
+
+        // a1 = +a1;        // 첫번째 방법 (문자 => 정수 변환)
+        // a2 = +a2;
+
+        // a1 = Number(a1);        // 두번째 방법 (문자 => 정수 변환)
+        // a2 = Number(a2);
+
+        // a1 = parseFloat(a1);        // 세번째 방법 (문자 => 정수 변환)
+        // a2 = parseFloat(a2);
+        
+        // console.log(`${a1} + ${a2} = ${a1+a2}`);
+
+
+        // (2) 풀이
+
+        let res = sum(a1, a2);
+
+        console.log(`${a1} + ${a2} = ${res}`);
+
+        /*
+        isNaN(변수) : 변수가 NaN인지 알려주는 함수
+        */
+
+        function sum(a1, a2){
+            a1 = a1??0;         //알림창에서 취소를 누를 경우엔 null이 발생
+            a2 = a2??0;         //null이나 undefined 나올 경우 값을 0으로 변경
+
+            // isNaN을 사용하지 않고 NaN을 0으로 변경하는 방법.
+            // +a1 => a1을 정수로 바꾼다는 뜻
+            let tmp1 = +a1;
+            let tmp2 = +a2;
+            if(tmp1 != a1)
+                a1 = 0;
+            if(tmp2 != a2)
+                a2 = 0;
+            return +a1 + +a2;
+        }
+
+            // isNaN을 사용한 방법
+            function sum(a1, a2){
+                a1 = a1??0;
+                a2 = a2??0;
+                a1 = isNaN(+a1) ? 0 : +a1;
+                a2 = isNaN(+a2) ? 0 : +a2;
+                return a1 + a2;
+            }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>심볼 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 심볼 ]
+
+        - 변수의 타입을 고유 타입으로 바꾸고싶을 때 사용
+        */
+        let obj1 = {
+            id : 'abc'
+        }
+        let obj2 = {
+            id : 'abc'
+        }
+        console.log(obj1.id == obj2.id);
+
+        let id1 = Symbol('id');     //같은 'id'의 심볼을 만듬
+        let id2 = Symbol('id');     //같은 'id'의 심볼을 만듬
+        let obj3 = {
+            id1 : 'abc'
+        }
+        let obj4 = {
+            id2 : 'abc'
+        }
+        console.log(`id1 == id2 : ${id1 == id2}`)   //같은 'id'의 심볼임에도 false가 나옴
+        console.log(`obj3.id1 == obj4.id2 : ${obj3.id1 == obj4.id2}`);
+        console.log(`obj3.['id1'] == obj4.['id2'] : ${obj3['id1'] == obj4['id2']}`);
+        
+        let id = Symbol('id');
+        let obj5 = {
+        }
+        obj5[id] = 'abc';
+
+        for(key in obj5){
+            console.log(`obj5[${key}] = ${obj5[key]}`);
+        }
+        console.log(`obj5[id] = ${obj5[id]}`);
+
+        let obj6 = {
+            [id] : 'abc'
+        }
+
+        for(key in obj6){
+            console.log(`obj6[${key}] = ${obj6[key]}`);
+        }
+        console.log(`obj6[id] = ${obj6[id]}`);
+
+   </script>
+</body>
+</html>

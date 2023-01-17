@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스팅 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 호이스팅 ]
+
+        - js가 실행 전, var로 된 변수나 함수들을 위로 끌어 올리는 작업
+        - let 변수는 호이스팅이 일어나지 않음
+        */
+
+        // [var]
+        x = 10;
+        var x;      //변수를 나중에 선언했음에도 에러가 나지 않음
+        console.log(x);
+
+
+        // [let]
+        // let은 호이스팅이 일어나지 않아 순서대로 동작하기에 에러가 발생함.
+        //y = 20;
+        let y;         //에러 발생
+        console.log(y);
+
+        // 예시.
+        /*
+        호이스팅에 의해
+        function test1(){ console.log('Hi'); } 가 위로 올라오고
+        test1()이 실행됨. 
+        */
+        test1();
+        function test1(){ console.log('Hi'); }
+
+        test2();
+        var test2 = function(){
+            console.log('Hello');
+        }
+    </script>
+</body>
+</html>

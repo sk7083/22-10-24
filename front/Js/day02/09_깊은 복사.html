@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깊은 복사 예제</title>
+</head>
+<body>
+    <script>
+        /* 
+        [ 깊은 복사 ]
+        */
+        let user1 = {
+            id : 'abc',
+            pw : 'qwe'
+        }
+        let user2 = {};
+
+        //user2 = user1;        //이런식으로 복사할 경우엔 한쪽이 값이 변경될 경우 같이 변경됨(공유 : 얕은 복사)
+
+        //반복문을 이용한 깊은 복사
+        for(key in user1){
+            user2[key] = user1[key];
+        }
+        user2.id = 'qwe';
+        console.log(user1);
+        console.log(user2);
+        
+        //오브젝트를 이용한 깊은 복사
+        Object.assign(user2, user1, {name : '홍길동'}, {name : '임꺽정', age : 21});
+        user2.id = 'qwe';
+        console.log(user1);
+        console.log(user2);
+    </script>
+</body>
+</html>

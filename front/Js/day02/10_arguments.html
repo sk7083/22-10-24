@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arguments 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ arguments ]
+        
+        - 함수에서 매개변수들을 모아 놓은 객체
+        - 매개변수들을 관리하는 역할 (arg1, arg2, arg3)
+        */
+
+        function test(arg1, arg2, arg3){
+            for(value of arguments){
+                console.log(value);
+            }
+        }
+        test(1,'abc',true,{name : '홍길동'});       //arguments로 인해 매개변수가 3개여도 추가로 호출하는 것이 가능
+    </script>
+</body>
+</html>

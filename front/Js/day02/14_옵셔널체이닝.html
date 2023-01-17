@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>옵셔널 체이닝 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        let 객체 = {
+            속성1 : 값,
+            속성2 : 값,
+            속성3 : {
+                속성11 : 값,
+                속성12 : 값,
+            }
+        }
+
+       
+        객체.속성3.속성11 = 새로운 값;       <= 속성3에 속성11에 접근하려면 이렇게 써야함
+        */
+
+        let user = {
+            id : '123',
+            pw : 'qwe',
+            authority : {
+                name : 'admin',
+                value : 10
+            }
+        }
+        user.authority.name = 'user';
+        user.authority.value = 9;
+        user.authority.code = 7;
+        user?.name.firstName = '홍';
+    </script>
+</body>
+</html>

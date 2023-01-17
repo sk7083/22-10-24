@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 자바 메소드의 경우 ]
+        리턴타입 메소드명(자료형 변수명1 자료형 변수명2, ...){
+
+        }
+        
+        [ 자바 스크립트 함수 선언 방식 ]
+        function 함수명(변수명1, 변수명2, ...){
+
+        }
+            - 선언된 함수는 어디에서 호출하든 상관없이 호출됨 현재 밑에 showMyName에 대한 함수보다
+              먼저 호출했음에도 showMyName(); 제대로 동작이 됨.
+              실행 시 함수가 제일 상단으로 위치하기에 이런 현상이 발생
+              이를 [ 호이스팅 ]이라 부름
+
+            - 함수 선언식의 경우 조건문 안에서 쓰일 경우 외부에선 호출이 불가능
+        */
+
+       showMyName();
+
+        function sayHello(){        //함수 선언
+            console.log('Hello');   //값 입력
+        }
+        sayHello();     //함수(sayHello)를 호출
+
+        /* 주어진 두 변수를 더해서 콘솔에 출력하는 함수를 만들어보세요. */
+       function plus1(a, b){
+        console.log(a+b);
+       }
+       
+
+       /* 주어진 두 변수를 더해서 반환하는 함수를 만들어보세요. */
+
+       function plus2(a,b){
+        return a+b;
+       }
+
+
+
+       plus1(1,2);                  //plus1 함수 출력
+
+       console.log(plus2(1,2));     //plus2 함수 출력 (1)
+
+       let res = plus2(1,2);        //plus2 함수 출력 (2)
+       console.log(res);
+
+       /*
+       [ 외부 함수 ] (전역 변수)
+
+       아래 코드 처럼 변수를 외부에 선언해도 함수에서 외부 함수를 불러와 사용할 수 있다.
+       name은 외부 변수지만, showName이라는 함수에서 호출하여 사용하는 모습.
+       (* 좋은 방법은 아님.) => 변수를 외우고 있어야함.
+       */
+
+       let name = '홍길동';
+       function showName(){
+        console.log(name);
+       }
+
+       showName();
+
+       // [ 매개 변수 ]
+
+       plus1(1,2,3);        //선언되지 않은 세번째 매개변수는 없는 변수 취급. 즉 1+2만 동작 결과 3
+
+       plus1(1);            //필요한 두번째 매개변수 값으로 undefined가 들어감
+                            // 1 과 undefined를 더하기 때문에 결과는 NaN이 나옴.
+
+
+       /*
+       기본값이 필요한 경우 매개변수의 써줌. 현재 : firstName ='길동', lastName = '홍'
+       호출 시 () 괄호 안에 값이 없을 경우엔 기본 값(매개변수)가 호출됨.
+       * undefined를 써도 값이 없는 취급 (null은 값으로 인정됨)
+       */
+       function showMyName(firstName ='길동', lastName = '홍'){
+        console.log(`${lastName} ${firstName}`);
+       }
+       showMyName('꺽정', '임');
+       showMyName('꺽정');
+       showMyName('꺽정', undefined);
+       showMyName();
+    </script>
+</body>
+</html>

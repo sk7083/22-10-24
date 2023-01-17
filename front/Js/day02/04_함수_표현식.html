@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 표현식 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ 함수 표현식 ]
+        let 함수명 = function(변수1, 변수2, ...){
+            구현;
+        };
+        - 함수 표현식이 선언되기 전에 호출이 되면 에러가 발생
+        - 함수 선언식은 선언되기 전 호출되도 동작
+        선언식을 더 선호하는 편
+
+        - 함수 표현식의 경우 조건문 안에서 쓰여도 외부에서 호출이 가능
+        */
+
+        //sayHello();     //함수 표현식이 선언되기 전에 호출 했기에 에러가 발생
+
+        let sayHello = function(){
+            console.log('Hello');
+        };                          // 함수 표현식에선 괄호 마지막에 ;(세미클론)을 붙여주는 편(없어도 동작은 함)
+        sayHello();
+
+        function sayName(){
+            console.log('홍길동');
+        }
+        let sayName2 = sayName;     //기존에 만들어진 함수를 사용할 수도 있음.
+        sayName2();
+    </script>
+</body>
+</html>

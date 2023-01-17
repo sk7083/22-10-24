@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>this 예제</title>
+</head>
+<body>
+    <script>
+        /*
+        [ this ]
+
+        - 객체의 속성 정보를 가져올 때 사용
+        */
+        let book = {
+            title : '이것이 자바다',
+            author : '홍길동',
+            /*
+            print : function(){
+                console.log(`제목 : ${this.title}, 저자 : ${this.author}`);
+            }
+            */
+
+            // 이렇게 줄여서 쓰는것도 가능.
+            print(){
+                console.log(`제목 : ${this.title}, 저자 : ${this.author}`);
+            }
+        }
+        book.print();
+    </script>
+</body>
+</html>
