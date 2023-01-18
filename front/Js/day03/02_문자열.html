@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문자열 예제</title>
+</head>
+<body>
+    <script>
+        let str = 'abc,def,ghi';
+        /*
+        [문제]
+        str에서 ,가 몇개 있는지 확인하는 코드를 작성하세요.
+        */
+        
+        let all = str.split(',').length-1;      //자바 스크립트에서 특정 문자 개수를 구하는 식
+        console.log(all);
+
+        /*
+        [ 강사 풀이 ]
+        index : 번지 수 위치   count : 찾고자하는 문자 갯수*/
+        let index = -1, count = 0;
+        do{
+            index = str.indexOf(',', index+1);
+            count = index >= 0 ? count + 1 : count;     //index가 음수일 경우 못찾음, 양수일 경우 카운터 갯수 +1
+        } while(index != -1);
+        console.log(`${str}에서 ,의 개수 : ` + count);
+
+        /*
+        [추가 문제]
+        ,를 기준으로 문자열들을 출력하는 코드를 작성하세요.
+        */
+
+        index = -1;
+        let start = 0, end = start+1;
+        do{
+            start = index+1;
+            index = str.indexOf(',', index+1);
+            end = index != -1 ? index : str.length;
+            let word = str.substring(start, end);
+            console.log(word);
+        } while(index != -1);
+
+        console.log('---------------------------------------')
+        /* 
+        split를 사용한 문제 풀이
+        
+        [ split ]
+        - 구분자를 기준으로 문자열을 추출하여 배열을 생성
+        */
+        let arr = str.split(',');
+        for(let tmp of arr){
+            console.log(tmp);
+        }
+    </script>
+</body>
+</html>
