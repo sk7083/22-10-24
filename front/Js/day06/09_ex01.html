@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+        .box{
+            border: 3px solid black;
+            width: 300px; height: 50px;
+        }
+        .box1{
+            float: left; margin-left: -3px; padding: 0;
+            border-left: 3px solid black; width: 33%; height: 50px;
+            text-align: center; line-height: 50px;
+        }
+        .box1 a{
+            text-decoration: none; color: black;
+            display: block; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="box1">
+            <div class="boxin1">
+                <a href="#" class="btn1">Show</a>
+            </div>
+            <div class="boxin2">
+                <a href="#" class="btn2">Fade</a>
+            </div>
+            <div class="boxin3">
+                <a href="#" class="btn3">Slide</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $('.btn1').click(()=>$('.box1').show(5000));
+
+    </script>
+</body>
+</html>
+
