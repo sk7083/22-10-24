@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>좌우 화살표에 따른 글씨 애니메이션</title>
+	<style>
+		*{padding: 0; margin: 0;}
+		a{text-decoration: none;}
+		ul{list-style: none;}
+		.container{
+			height: 50px; margin-top: 30px; border: 3px solid black;
+			width: 300px; overflow: hidden; position: relative;
+		}
+		.list-news{
+			width: 500%;
+		}
+		.list-news::after{
+			content: ''; display: block; clear: both;
+		}
+		.item-news{
+			height: 50px; line-height: 50px; padding-left: 20px;
+			background-color: yellow;
+			float: left; width: 20%; box-sizing: border-box;
+		}
+
+		.btn-box{
+			position: absolute; top: -1px; right: -1px; bottom: -1px;
+			background-color: #fff;
+		}
+		.btn-box::after{
+			content: ''; display: block; clear: both;
+		}
+		.btn-prev, .btn-next{
+			border: 1px solid black; float: left; font-size: 30px;
+			line-height: 50px; 
+		}
+		.btn-next{
+			margin-left: -1px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="btn-box">
+			<a href="#" class="btn-prev">&lt;</a>
+			<a href="#" class="btn-next">&gt;</a>
+		</div>
+		<ul class="list-news">
+			<li class="item-news">
+				<a href="#" class="link-news">안녕하세요1</a>
+			</li>
+			<li class="item-news">
+				<a href="#" class="link-news">안녕하세요2</a>
+			</li>
+			<li class="item-news">
+				<a href="#" class="link-news">안녕하세요3</a>
+			</li>
+			<li class="item-news">
+				<a href="#" class="link-news">안녕하세요4</a>
+			</li>
+			<li class="item-news">
+				<a href="#" class="link-news">안녕하세요5</a>
+			</li>
+		</ul>
+	</div>
+	<script src="../js/jquery.min.js"></script>
+	<script>
+		//애니메이션 실행 후, 요소를 떼서 붙임
+		$('.btn-next').click(function(){
+			let width = $('.item-news').first().innerWidth();
+			if(!$('.item-news').first().is(':animated')){
+				$('.item-news').first().animate({
+					marginLeft : `-${width}px`
+				},1000, function(){
+					$(this).detach().appendTo('.list-news').removeAttr('style');
+				});
+			}
+		});
+		//이전 버튼 클릭 이벤트를 등록
+			//요소를 떼서 붙인 후 애니메이션을 실행
+			//=> 마지막 요소를 떼서 앞에 붙이고, margin-left를 지정
+		//last(), prependTo(), css() 사용
+
+		$('.btn-prev').click(function(){
+
+			let width1 = $('.item-news').first().innerWidth();
+			if(!$('.item-news').first().is(':animated')){
+				$('.item-news')
+				.last()
+				.detach()
+				.prependTo('.list-news')
+				.css('marginLeft', `-${width1}px`)
+			.animate({
+				marginLeft : 0
+			}, 1000);
+			}
+		});
+	</script>
+</body>
+</html>
+
+<!-- 
+			/*
+		$(selector).animate({params},speed,callback);
+		 - {params} : 애니메이션을 적용시킬 css속성과 값들로 이루어진 객체
+		 	- css속성명에 -가 있는 경우는 -를 없애고 카멜 표기법으로 하던지,
+			  '속성명'으로 작성
+		 - speed : 애니메이션 실행 시간. 단위 ms
+		 - callback : 애니메이션 종료 후 실행할 함수
+		*/
+ -->
+<!-- 
+	            //css
+            $('.box').css({
+                borderWidth : '3px',
+                fontSize : '30px'
+            });
+ -->
+<!-- 
+        A.prepend(B) == B.prependTo(A)
+            - A요소의 첫번째 자식 요소 앞에 B를 추가
+
+	        /*
+        A.append(B) 
+            - A요소의 마지막 자식 요소 다음에 B를 추가
+            - B는 요소/html 코드
+        A.appendTo(B)
+            - B요소 마지막 자식 요소 다음에 A를 추가
+            - B는 요소/html 코드
+        A.append(B) == B.appendTo(A)
+        A.prepend(B) == B.prependTo(A)
+            - A요소의 첫번째 자식 요소 앞에 B를 추가
+        A.after(B)
+            - A요소 다음에 B를 추가
+        A.before(B)
+            - A요소 이전에 B를 추가
+        A.remove()
+            - A요소 포함한 자손 요소를 삭제
+        A.empty()
+            - A요소의 자손 요소들을 삭제 (A요소는 삭제)
+        */
+ -->
