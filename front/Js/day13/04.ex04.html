@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 4</title>
+    <script src="../js/jquery.min.js"></script>
+    <style>
+       .box-container{
+        border: 1px solid black; padding: 20px;
+        border-radius: 10px;
+       }
+       .row{
+        display: flex; margin-bottom: 20px; 
+       }
+       .box{
+        width: 100%; height: 100px; border: 1px solid black;
+        margin-left: 20px; border-radius: 10px; padding: 0px;
+        color: black; text-decoration: none; line-height: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        }
+       .box+.box{
+        margin-left: 20px;
+       }
+       .popup-container{
+        position: fixed; top: 0; left: 0; right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3); display: none;
+        
+       }
+       .popup{
+        width: 500px; height: 500px;
+        background-color: white;
+        margin: calc(50vh - 250px) auto;
+        position: relative;
+       }
+       .popup .btn-close{
+        position: absolute; top: 0; right: 0;
+        font-size: 30px; background-color: white; border: 0; outline: 0; cursor: pointer;
+       }
+       .popup .contents{
+        padding-top: 80px;
+       }
+       .btn-plus{
+        display: block; width: 100%; padding: 0; height: 50px; font-size: 30px;
+        border-radius: 10px; background-color: white; border: 1px solid gray;
+        cursor: pointer; 
+      }
+    </style>
+</head>
+<body>
+   <div class="box-container">
+      <div class="row">
+        <a href="#" class="box">안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. 안녕하세요. </a>
+        <a href="#" class="box">만나서 반갑습니다.</a>
+        <a href="#" class="box">제 이름은 홍길동입니다.</a>
+      <div>
+      <div>
+        <button class="btn-plus">+</button>
+      </div>
+    </div>
+      
+
+   <div class="popup-container">
+        <div class="popup popup">
+            <button class="btn-close">X</button>
+            <div class="contents"></div>
+        </div>
+
+   </div>
+    <script>
+        $(document).on('click','.box',function(){
+          //선택한 박스의 내용을 가져옴
+          let content = $(this).text();
+          //가져온 내용을 팝업창 컨텐츠에 추가
+          $('.contents').text(content);
+          //팝업 컨테이너를 보여줌
+          $('.popup-container').show();
+      });
+    // X버튼 기능
+      $('.popup .btn-close').click(function(){
+        $('.popup-container').hide();
+      })
+
+
+      //+버튼 클릭 이벤트를 등록
+      $('.btn-plus').click(function(){
+        //문자열로 추가할 요소들을 구성 : 반복문을 이용
+        let str = 
+        '<div class="row">';
+
+        
+        for(i = 0; i<3; i++){
+       str += '<a href="#" class="box"></a>'
+      }
+      str += '<div>';
+        //문자열로 구성된 요소를 추가
+        $(this).before(str);
+      })
+
+    </script>
+</body>
+</html>
+
+<!-- 
+          $(선택자).siblings(선택자1)
+            - 요소의 형제 요소들 중 선택자1를 만족하는 요소들
+            - 선택자1 생략가능
+
+                    A.appendTo(B)
+            - B요소 마지막 자식 요소 다음에 A를 추가
+            - B는 요소/html 코드
+ -->

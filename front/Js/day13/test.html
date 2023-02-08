@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <script src="../js/jquery.min.js"></script>
+
+    <style>
+        
+        .box-id, .box-pw, .box-pw0{
+            margin-bottom: 10px; display: block; width: 100%; 
+        }
+        .btn-reset{
+            float: left; margin-left: 150px;  margin-top: 10px;
+        }
+        .btn-reset, .btn-member{
+            margin-top: 10px;
+        }
+
+        .select{
+            float: left; 
+        }
+
+        .selected{
+            background-color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <div class="all-box">
+            <fieldset>
+            <legend>회원 가입 양식</legend>
+                <section>
+                <div class="box">
+                    <div class="box-id">아이디
+                        <input type="text" name="id" style="margin-left: 58px;">
+                        <input type="button" class="btn-id" value="중복확인">
+                    </div>
+                    <div class="box-pw">비밀번호
+                        <input type="password" class="pw1" style="margin-left: 42px;">
+                    </div>
+                    <div class="box-pw0">비밀번호 확인
+                        <input type="password" class="pw2" style="margin-left: 5px;">
+                    </div>
+                    <div class="select">지역</div>
+                    <div style="margin-left: 120px; margin-top: 10px;">
+                        <label>
+                            서울<input type="radio" name="map" value="서울" class="btn-select">
+                        </label>
+                        <label>
+                            부산<input type="radio" name="map" value="부산" class="btn-select">
+                        </label>
+                        <label>
+                            대구<input type="radio" name="map" value="대구" class="btn-select">
+                        </label>
+                    </div>
+                    <div class="btn-reset" style="margin-right: 10px;">
+                        <button>초기화</button>
+                    </div>
+                    <button type="submit" class="btn-member">회원가입</button>
+                </div>
+            </div>
+                </section>
+        </fieldset>
+        </div>
+    </form>
+
+    <script>
+    $('.btn-id').click(function(){
+
+        let idRegex = '^[a-z][A-Za-z\d\-\_]{6,12}$';
+			if(!idRegex.match($("input[name='id']")).val()){
+				$("input[name='id']").addClass('selected');
+				$('[name=id]').focus();
+			} 
+    });
+
+    </script>
+</body>
+</html>
+
