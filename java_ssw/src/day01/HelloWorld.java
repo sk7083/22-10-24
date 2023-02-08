@@ -10,5 +10,6 @@ public class HelloWorld {
 		 */
 		System.out.println("Hello world!"); // 콘솔에 원하는 값을 출력하는 기능
 		System.out.println("수정");
+		System.out.println("asdawdasd");
 	}
 }
