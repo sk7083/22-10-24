@@ -53,6 +53,14 @@
           - 요소 속성의 data-name에 해당하는 값을 가져옴
         data('name', '값')
           - 요소 속성이 data-'name'에 해당하는 값을 설정함
+        
+        - text() : 요소 안에 글자를 가져옴(자손 포함). 대부분 태그에 적용 가능. 단, 단일 태그는 제외
+        - html() : 요소 안의 html 코드를 가져옴(자손 포함). 단, 단일 태그는 제외
+        - val() : 요소 안의 value를(value값이 표준인 태그만) 가져옴. input태그, select태그, textaera태그만 가능.
+        - show()/hide()/toggle()   : 너비,높이가 0,0에서 지정된 값으로 변경. 너비 높이가 0이면 display:none
+        - fadeIn()/fadeOut()/fadeToggle()/fadeTo() : 투명도가 변경, 투명도 0이면 display:none
+        - slideDown()/slideUp()/slideToggle() : 높이가 0에서 지정된 값으로 변경. 높이가 0이면 display:none
+        
         */
 
 
