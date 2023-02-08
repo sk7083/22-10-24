@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>    
+        var x = 10;
+        console.log(x);
+
+        if(x > 0){
+            var y = 20;
+            console.log(y);
+        }
+        console.log(y);     //var는 함수 밖을 빠져나와도 사용 가능
+// ======================================================================
+        console.log('let 사용할 경우')
+// ======================================================================
+        let x1 = 10;
+        console.log(x);
+        
+        if(x > 0){
+            let y1 = 20;
+            console.log(y1);
+        }
+        // console.log(y1);            //let은 불가능 [오류 발생]
+
+
+        let num1 = 10;
+        let num2 = 20;
+        if(num1 > 0){
+            let num2 = 30;
+            console.log(`num2=${num2}`);
+        }
+        console.log(`num2=${num2}`);        //전역변수 값을 가지고 옴
+
+// ======================================================================
+        console.log('let 사용할 경우')
+// ======================================================================
+
+        var num3 = 10;
+        var num4 = 20;
+        if(num1 > 0){
+            var num4 = 30;
+            console.log(`num4=${num4}`);
+        }
+        console.log(`num4=${num4}`);        //클로저 //지역변수 안에 있는 값을 가지고 나옴
+    </script>
+    
+</body>
+</html>
