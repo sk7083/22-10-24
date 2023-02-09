@@ -1,22 +1,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!doctype html>
-<html>
-<head>
-	<title>Home</title>
-</head>
-<body>
-<h1>
-	Hello world!  
-</h1>
-
-<P>  안녕하세요 제 이름은 ${name1} 입니다. </P>
-<P> 제 나이는 ${age1} 입니다.</P>
-<form action="/spring/" method="post">
-	<input type="text" name="name"> <br>
-	<input type="text" name="age"> <br>
-	<button>전송</button>
-</form>
-</body>
-</html>
+<div class="container-fluid">
+	<h1>스프링</h1>
+	<a href="/spring/ex1">데이터 전송 예제1</a> <br>
+	<a href="/spring/ex2">데이터 전송 예제2</a> <br>
+	<a href="/spring/ex3">데이터 전송 예제3</a> <br>
+	<a href="/spring/ex4">데이터 전송 예제4</a> <br>
+	<a href="/spring/ex5?num=2022160001">DB 연결 예제5</a> <br>
+</div>
