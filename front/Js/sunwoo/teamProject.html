@@ -11,20 +11,11 @@
 			 margin: 0;
 		}
 		.s-header{
-			background-color: aquamarine; border: 2px solid black; width: 100%; height: 140px;
+			 border: 1px solid black; width: 100%; height: 140px;
 			font-size: 50px; text-align: center;
 		}
-		.s-body-left-first-area{
-			padding: 10px 0 20px 0; margin-bottom: 40px; border-bottom: 2px solid #222;
-		}
-		.s-body-area-box{
-			width: 300px; height: 600px; border: 2px solid black; 
-		}
-		.s-body-area-box-area-title{
-			font-weight: bold; margin-left: 10px; margin-top: 10px; border: none; cursor: pointer; font-size: 16px;
-			
-		}
-		.s-body-area-box-area-content-down{
+
+		/* .s-body-area-box-area-content-down{
 			position: relative;
 			top: -3px;
 			left: 35%;
@@ -36,26 +27,49 @@
 			-webkit-transform: rotate(-45deg);
 			transform: rotate(-45deg);
 			box-sizing: border-box;
-	}
+	} */
 	.s-body-area-box-area-content-box{
 		padding-left: 50px; padding-top: 20px; font-weight: bold; font-size: 15px;
 	}
 	.s-body-area-box-area-content{
 		margin-bottom: 5px;
 	}
-	.s-body-area-box-area-content-hover-box{
-		border: 3px solid gray; width: 300px; height: 500px; background-color: gray; display: none;
-	}
 	.area-Seoul-content{
 		margin-left: 40px; margin-bottom: 5px;
-	}
-	.s-body-area-box-area-content-box .area-Seoul-title::after{
-		 border: 3px solid red; width: 30px; height: 30px;
-		 content: "붙음?";
 	}
 	.area-Seoul-title{
 		font-weight: bold; font-size: 16px; border: none;
 	}
+	/* =========================== 좌측 라인 css =========================== */
+	.s-body-left-box{
+		width: 30%; float: left;
+		border: 1px solid black; border-collapse: collapse;
+	}
+
+	/* 좌측 첫번째 제목 박스 css */
+	.s-body-left-title-box{
+		height: 80px; margin-left: 2px;
+		border-bottom: 2px solid #222; margin-bottom: 20px;
+
+	}
+	/* 좌측 두번째 지역 선택 박스 css */
+	.s-body-left-area-box{
+		height: 500px; background-color: wheat;
+		border: 2px solid #222;
+	}
+	/* 좌측 두번째 지역 선택 박스 => 지역 선택 박스 css */
+	.areaSelect-box{
+			font-weight: bold; margin-left: 10px; margin-top: 10px; border: none; cursor: pointer; font-size: 16px;
+		}
+
+
+
+	/* =========================== 우측 라인 css =========================== */
+	.s-body-right-box{
+		width: 68%; float: right; height: 800px;
+		background-color: aquamarine; 
+	}
+	
 	</style>
 </head>
 <body>
@@ -64,8 +78,12 @@
 			<div class="s-header-box1">
 			</div>
 		</div>
+		<!-- body 전체 박스 -->
 		<div class="s-body">
-			<div class="s-body-left-first-area">
+			<!-- 좌측 전체 박스 -->
+			<div class="s-body-left-box">
+				<!-- 좌측 첫번째 제목 박스 -->
+				<div class="s-body-left-title-box">
 						<h1>서울</h1>
 						<!-- <h1>경기</h1>
 						<h1>인천</h1>
@@ -82,27 +100,32 @@
 						<h1>광주</h1>
 						<h1>전남</h1>
 						<h1>전북</h1> -->
-			</div>
-			<div class="s-body-area-box">
-				<div class="s-body-area-box-area">
-						<input type="button" class="s-body-area-box-area-title" value="지역 선택">
-						<input type="button" class="s-body-area-box-area-content-down">
-						<div class="s-body-area-box-area-content-box">
-							<div class="s-body-area-box-area-content">
-									<input type="button" class="area-Seoul-title" value="서울">
-									<div class="area-Seoul-content">강남</div>
-									<div class="area-Seoul-content">서초</div>
-									<div class="area-Seoul-content">잠실</div>
-									<div class="area-Seoul-content">잠실시내</div>								
-						</div>
 				</div>
-							<div class="s-body-area-box-area-content">경기</div>
-							<div class="s-body-area-box-area-content">인천</div>
-							<div class="s-body-area-box-area-content">강원</div>
-							<div class="s-body-area-box-area-content">제주</div>
+				<!-- 좌측 두번째 지역 선택 박스 -->
+				<div class="s-body-left-area-box">
+					<div class="s-area-box">
+						<div class="s-area-areaSelect-box">
+							<input type="button" class="areaSelect-box" value="지역 선택">
 						</div>
-						<div class="s-body-area-box-area-content-hover-box">
-						</div>
+							<div class="s-body-area-box-area-content-box">
+								<div class="s-body-area-box-area-content">
+										<input type="button" class="area-Seoul-title" value="서울">
+										<!-- <div class="area-Seoul-content">강남</div>
+										<div class="area-Seoul-content">서초</div>
+										<div class="area-Seoul-content">잠실</div>
+										<div class="area-Seoul-content">잠실시내</div>								 -->
+							</div>
+					</div>
+								<!-- <div class="s-body-area-box-area-content">경기</div>
+								<div class="s-body-area-box-area-content">인천</div>
+								<div class="s-body-area-box-area-content">강원</div>
+								<div class="s-body-area-box-area-content">제주</div> -->
+				</div>
+			</div>
+		</div>
+		<!-- 우측 전체 박스 -->
+			<div class="s-body-right-box">
+				
 			</div>
 				
 			</div>
