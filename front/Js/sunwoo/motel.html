@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/main.css">
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/main.js"></script>
+  <style>
+    .motelcontainer {
+    position: absolute;
+    margin-top: 130px;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    padding: 0;
+    
+}
+    
+    .motelcontainer .region {
+    float: left;
+    background: yellow;
+    height: 300px;
+    width: 30%;
+    }
+    .motelcontainer .cli-page {
+    float: right;
+    height: 800px;
+    width: 70%;
+    /* margin-left: 20px; */
+    background-color: aquamarine;
+}
+  </style>
+</head>
+<body>
+  <header class="page-header" role="banner">
+    <div class="inner">
+        <h1 class="site-logo"><a href="./"><img src="../img/travel.png" alt="logo"></a></h1>
+        <nav class="primary-nav" role="navigation">
+            <ul>
+                <li>
+                    <!-- <div class="search-container">
+                        <input type="text" placeholder="오늘 뭐할까">
+                        <button type="submit"><img src="./img/search.png" alt=""></button>
+                    </div> -->
+                    <form action="" class="search-container">
+                        <input type="text" class="search-input" placeholder="검색">
+                        <button type="submit" class="search-btn"><img src="../img/search.png" alt="버튼"></button>
+                    </form>
+                </li>
+                <li><a href="./">About</a></li>
+                <li><a href="./">Work</a></li>
+                <li><a href="./">고객센터</a></li>
+                <li class="login"><a href="#">로그인</a>
+                </li>
+                <li class="cart_img"><a href="./"><img src="../img/cart.png" alt="logo"></a></li>
+            </ul>
+            <ul class="category">
+                <li><a href="./">추천</a></li>
+                <li><a href="./">국내숙소</a></li>
+                <li><a href="./">레저문화</a></li>
+                <li><a href="./">해외여행</a></li>
+                <li><a href="./">커뮤니티</a></li>
+            </ul>
+
+        </nav>
+    </div>
+</header>
+<div class="motelcontainer">
+  <div class="region"></div>
+  <div class="cli-page"></div>
+</div>
+</body>
+</html>

@@ -3,25 +3,22 @@
 /* Base */
 *{padding: 0; margin: 0;}
 html { font-family: "Ropa Sans", sans-serif; font-size: 16px; line-height: 1.5; }
-body { background-color: rgb(240, 240, 240); color: rgb(0, 0, 0); }
+body { background-color: rgb(240, 240, 240); color: rgb(0, 0, 0); min-width: 960px; padding-top: 0px; }
 h1, h2, h3, p, ul { margin: 0; }
 ul { padding-left: 0; }
 ul li { list-style-type: none; }
 a { color: inherit; text-decoration: none; }
 img { vertical-align: middle; }
-
-/* section{
-  padding-top: 130px;
-} */
-
+section{
+    padding-top: 130px; 
+}
 
 .page-header {
     background-color: rgb(255, 255, 255);
     height:120px;  width: 100%;  
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.25); 
-	  position:relative; /*아래 dummy 텍스트와의 공백을 없애기 위해*/
+	position:absolute; /*아래 dummy 텍스트와의 공백을 없애기 위해*/
     display: block;
-    z-index: 2000;
 }
 
 .page-header.sticky { position: fixed; top: 0; }
@@ -81,66 +78,3 @@ img { vertical-align: middle; }
     top: 10px; bottom: 0px; right:10px;
 }
 
-/* 광고 */
-.slideWrap{
-  max-width: 1280px;
-  width:100%;
-  margin:1em auto;
-  position: relative;
-  z-index:1000;
-}
-
-/* 상품 노출  */
-.multipleWrap .multiple_slider{
-  /* margin: 0 25em; */
-  text-align: center;
-}
-.multiple_slider li img{
-  width:100%;
-  height: 300px;
-}
-.modal{
-  position: absolute;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.8);
-  top:0%; left: 0%; 
-  display: none;
-  z-index: 3000;
-}
-
-.modal_content{
-width:800px; height:800px;
-background:#fff; border-radius:10px;
-position:relative; top:50%; left:50%;
-margin-top:-400px; margin-left:-400px;
-text-align:center;
-box-sizing:border-box;
-line-height:23px; 
-padding-top: 15em;
-}
-.modal_content .exit-btn{
-  height: 50px;
-  width: 50px;
-  line-height: 50px;
-  font-size: 30px;
-  right: 0;
-  top: 0;
-  position: absolute;
-  background: white;
-  border: 0px;
-}
-
-.login-container{
-line-height: 40px;
-}
-.login-container h1{
-margin-bottom: 1em;
-}
-.login-container input{
-width: 30em; height:5em; margin: 1em;
-border-radius: 10px; 
-
-}
-.login-container a{
-margin-left: 2em;
-}

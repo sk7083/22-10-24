@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>teamProject</title>
+	<script src="../Js/js/jquery.min.js"></script>
+	<link rel="stylesheet" href="../sunwoo/main.css">
+	<style>
+
+
+
+
+	/* =========================== 좌측 라인 css =========================== */
+	/* .s-body {
+		position: relative;
+		margin-top: 130px;
+		background: black;
+		border: 1px solid black;
+		height: 100%;
+		width: 100%;
+	}
+
+	.s-body-left-box {
+		float: left;
+		border: 1px solid black;
+		padding-left: 50px;
+		width: 300px;
+	}
+	.s-body-right-box {
+		float: left; width: 60%;
+		height: 800px;
+		width: 800px;
+		margin-left: 20px;
+		background-color: aquamarine;
+	} */
+
+	.s-body-area-box-area-content-box{
+		padding-left: 50px; padding-top: 20px; font-weight: bold; font-size: 15px;
+	}
+
+	
+
+	/* 좌측 첫번째 제목 박스 css */
+	.s-body-left-title-box{
+		height: 80px; margin-top: 120px;
+		border-bottom: 2px solid #222; margin-bottom: 20px;
+	}
+	/* 좌측 첫번째 제목 글씨 css */
+	.s-body-left-title{
+		padding-top: 15px; margin-left: 20px;
+	}
+	/* 좌측 두번째 지역 선택 박스 css */
+	.s-body-left-area-box{
+		height: 700px; 
+		border: 2px solid #222;
+	}
+	/* 좌측 두번째 지역 선택 박스 (숨겨진 박스) css */
+	.s-body-left-area-box{
+		height: 1200px; 
+		border: 2px solid #222;
+	}
+	/* 좌측 두번째 지역 선택 박스 => 지역 선택 박스 css */
+	.areaSelect-box{
+		font-weight: bold; margin-left: 10px; margin-top: 10px; border: none; cursor: pointer; font-size: 23px;
+	}
+	/* 지역 상세 지역 */
+	.area1-content, .area2-content, .area3-content, .area4-content, .area5-content, .area6-content, .area7-content
+	, .area8-content, .area9-content, .area10-content, .area11-content, .area12-content, .area13-content, .area14-content
+	, .area15-content, .area16-content{
+		margin-left: 50px; margin-bottom: 5px; font-size: 17px; 
+	}
+	/* 지역 타이틀 */
+	.area1-title, .area2-title, .area3-title, .area4-title, .area5-title, .area6-title, .area7-title, .area8-title
+	, .area9-title, .area10-title, .area11-title, .area12-title, .area13-title, .area14-title, .area15-title, .area16-title{
+		font-weight: bold; font-size: 20px; border: none; margin-bottom: 10px; cursor: pointer;
+	}
+	
+
+
+
+	/* =========================== 우측 라인 css =========================== */
+
+	
+	</style>
+</head>
+<body>
+	<header class="page-header" role="banner">
+		<div class="inner">
+			<h1 class="site-logo"><a href="./"><img src="../img/travel.png" alt="logo"></a></h1>
+			<nav class="primary-nav" role="navigation">
+				<ul>
+					<li>
+						<!-- <div class="search-container">
+							<input type="text" placeholder="오늘 뭐할까">
+							<button type="submit"><img src="./img/search.png" alt=""></button>
+						</div> -->
+						<form action="" class="search-container">
+							<input type="text" class="search-input" placeholder="검색">
+							<button type="submit" class="search-btn"><img src="../img/search.png" alt="버튼"></button>
+						</form>
+					</li>
+					<li><a href="./">About</a></li>
+					<li><a href="./">Work</a></li>
+					<li><a href="./">고객센터</a></li>
+					<li><a href="./">로그인</a></li>
+					<li class="cart_img"><a href="./"><img src="../img/cart.png" alt="logo"></a></li>
+				</ul>
+				<ul class="category">
+					<li><a href="./">추천</a></li>
+					<li><a href="./">국내숙소</a></li>
+					<li><a href="./">레저문화</a></li>
+					<li><a href="./">해외여행</a></li>
+					<li><a href="./">커뮤니티</a></li>
+				</ul>
+	
+			</nav>
+		</div>
+	</header>
+
+	<form action="">
+	
+		<!-- body 전체 박스 -->
+		<div class="s-body">
+			<!-- 좌측 전체 박스 -->
+			<div class="s-body-left-box">
+				<!-- 좌측 첫번째 제목 박스 -->
+				<div class="s-body-left-title-box">
+					<div class="s-body-left-title"><h1>서울</h1></div>
+					<!-- <div class="s-body-left-title"><h1>인천</h1></div>
+					<div class="s-body-left-title"><h1>강원</h1></div>
+					<div class="s-body-left-title"><h1>제주</h1></div>
+					<div class="s-body-left-title"><h1>부산</h1></div>
+					<div class="s-body-left-title"><h1>경남</h1></div>
+					<div class="s-body-left-title"><h1>대구</h1></div>
+					<div class="s-body-left-title"><h1>경북</h1></div>
+					<div class="s-body-left-title"><h1>울산</h1></div>
+					<div class="s-body-left-title"><h1>대전</h1></div>
+					<div class="s-body-left-title"><h1>충남</h1></div>
+					<div class="s-body-left-title"><h1>충북</h1></div>
+					<div class="s-body-left-title"><h1>광주</h1></div>
+					<div class="s-body-left-title"><h1>전남</h1></div>
+					<div class="s-body-left-title"><h1>전북</h1></div> -->
+				</div>
+				<!-- 좌측 두번째 지역 선택 박스 -->
+				<div class="s-body-left-area-box">
+					<div class="s-area-box">
+						<div class="s-area-areaSelect-box">
+							<input type="button" class="areaSelect-box" value="지역 선택">
+						</div>
+						<!-- 좌측 지역별 상세 지역 박스 -->
+						<div class="s-body-area-box-area-content-box">
+							<!-- 서울 지역 상세 박스 -->
+							<div class="s-body-area1">
+								<div class="area1-title-box">
+									<input type="button" class="area1-title" value="서울">
+									<div class="area1-content">강남/역삼/삼성/논현</div>
+									<div class="area1-content">서초/신사/방배</div>
+									<div class="area1-content">잠실/방이</div>
+									<div class="area1-content">잠실새내/신천</div>
+									<div class="area1-content">영등포/여의도</div>		
+									<div class="area1-content">구로/금천/오류/신도림</div>	
+									<div class="area1-content">강서/화곡/까치산역/목동</div>	
+									<div class="area1-content">천호/길동/둔촌</div>	
+									<div class="area1-content">서울대/신림/사당/동작</div>	
+									<div class="area1-content">종로/대학로</div>	
+									<div class="area1-content">용산/중구/명동/이태원</div>	
+									<div class="area1-content">성신여대/성북/월곡</div>	
+									<div class="area1-content">노원/도봉/창동</div>
+									<div class="area1-content">강북/수유/미아</div>	
+									<div class="area1-content">왕십리/성수/금호</div>	
+								</div>							
+							</div>
+							<!-- 경기 지역 상세 박스 -->
+							<div class="s-body-area2">
+								<div class="area2-title-box">
+									<input type="button" class="area2-title" value="경기">
+									<div class="area2-content">수원/인계</div>
+									<div class="area2-content">수원시청/권선/영통</div>
+									<div class="area2-content">수원역/세류/팔달문/구운/장안</div>
+									<div class="area2-content">대부도/제부도</div>
+									<div class="area2-content">안성/평택/송탄</div>
+									<div class="area2-content">오산/화성/동탄</div>
+									<div class="area2-content">파주/금촌/헤이리/통일동산</div>
+									<div class="area2-content">김포/장기/구래/대명항</div>
+									<div class="area2-content">고양/일산</div>
+									<div class="area2-content">의정부</div>
+									<div class="area2-content">부천</div>
+									<div class="area2-content">안양/평촌/인덕원/과천</div>
+									<div class="area2-content">군포/금정/산본/의왕</div>
+									<div class="area2-content">안산</div>
+									<div class="area2-content">광명/철산/시흥신천역</div>
+								</div>
+							</div>
+							<!-- 인천 지역 상세 박스 -->
+							<div class="s-body-area3">
+								<div class="area3-title-box">
+									<input type="button" class="area3-title" value="인천">
+									<div class="area3-content">부평</div>
+									<div class="area3-content">주안</div>
+									<div class="area3-content">구월/소래포구</div>
+									<div class="area3-content">동암/간석</div>
+									<div class="area3-content">을왕리/인천공항</div>
+									<div class="area3-content">월미도/차이나타운/신포/동인천</div>
+									<div class="area3-content">작전/경인교대</div>
+									<div class="area3-content">용현/숭의/도화/송림</div>
+									<div class="area3-content">송도/연수</div>
+									<div class="area3-content">서구/검단</div>
+									<div class="area3-content">강화/옹진/백령도</div>
+								</div>
+							</div>
+							<!-- 강원 지역 상세 박스 -->
+							<div class="s-body-area4">
+								<div class="area4-title-box">
+									<input type="button" class="area4-title" value="강원">
+									<div class="area4-content">강릉역/교동택지/옥계</div>
+									<div class="area4-content">경포대/사천/주문진</div>
+									<div class="area4-content">양양/낙산/하조대/인제</div>
+									<div class="area4-content">속초/설악/동명항/고성</div>
+									<div class="area4-content">춘천/홍천/철원/화천</div>
+									<div class="area4-content">원주/횡성</div>
+									<div class="area4-content">정동진/동해/삼척</div>
+									<div class="area4-content">평창/영월/정선/태백</div>
+								</div>
+							</div>
+							<!-- 제주 지역 상세 박스 -->
+							<div class="s-body-area5">
+								<div class="area5-title-box">
+									<input type="button" class="area5-title" value="제주">
+									<div class="area5-content">제주시</div>
+									<div class="area5-content">애월/협재</div>
+									<div class="area5-content">서귀포/마라도</div>
+								</div>
+							</div>
+							<!-- 부산 지역 상세 박스 -->
+							<div class="s-body-area6">
+								<div class="area6-title-box">
+									<input type="button" class="area6-title" value="부산">
+									<div class="area6-content">해운대/재송</div>
+									<div class="area6-content">송정/기장/정관</div>
+									<div class="area6-content">서면/초읍/양정/부산시민공원/범천</div>
+									<div class="area6-content">남포동/부산역/송도/영도/범일동</div>
+									<div class="area6-content">광안리/수영/민락</div>
+									<div class="area6-content">경성대/대연/용호/문현</div>
+									<div class="area6-content">동래/온천장/부산대/구서/사직</div>
+									<div class="area6-content">연산/토곡</div>
+									<div class="area6-content">사상(공항결전철)/학장/엄궁</div>
+									<div class="area6-content">강서/하단/사하/명지/신호/다대포</div>
+									<div class="area6-content">덕천/만덕/구포/화명/북구</div>
+								</div>
+							</div>
+							<!-- 경남 지역 상세 박스 -->
+							<div class="s-body-area7">
+								<div class="area7-title-box">
+									<input type="button" class="area7-title" value="경남">
+									<div class="area7-content"></div>
+								</div>
+							</div>
+							<!-- 대구 지역 상세 박스 -->
+							<div class="s-body-area8">
+								<div class="area8-title-box">
+									<input type="button" class="area8-title" value="대구">
+									<div class="area8-content"></div>
+								</div>
+							</div>
+							<!-- 경북 지역 상세 박스 -->
+							<div class="s-body-area9">
+								<div class="area9-title-box">
+									<input type="button" class="area9-title" value="경북">
+									<div class="area9-content"></div>
+								</div>
+							</div>
+							<!-- 울산 지역 상세 박스 -->
+							<div class="s-body-area10">
+								<div class="area10-title-box">
+									<input type="button" class="area10-title" value="울산">
+									<div class="area10-content"></div>
+								</div>
+							</div>
+							<!-- 대전 지역 상세 박스 -->
+							<div class="s-body-area11">
+								<div class="area11-title-box">
+									<input type="button" class="area11-title" value="대전">
+									<div class="area11-content"></div>
+								</div>
+							</div>
+							<!-- 충남 지역 상세 박스 -->
+							<div class="s-body-area12">
+								<div class="area12-title-box">
+									<input type="button" class="area12-title" value="충남">
+									<div class="area12-content"></div>
+								</div>
+							</div>
+							<!-- 충북 지역 상세 박스 -->
+							<div class="s-body-area13">
+								<div class="area13-title-box">
+									<input type="button" class="area13-title" value="충북">
+									<div class="area13-content"></div>
+								</div>
+							</div>
+							<!-- 광주 지역 상세 박스 -->
+							<div class="s-body-area14">
+								<div class="area14-title-box">
+									<input type="button" class="area14-title" value="광주">
+									<div class="area14-content"></div>
+								</div>
+							</div>
+							<!-- 전남 지역 상세 박스 -->
+							<div class="s-body-area15">
+								<div class="area15-title-box">
+									<input type="button" class="area15-title" value="전남">
+									<div class="area15-content"></div>
+								</div>
+							</div>
+							<!-- 전북 지역 상세 박스 -->
+							<div class="s-body-area16">
+								<div class="area16-title-box">
+									<input type="button" class="area16-title" value="전북">
+									<div class="area16-content"></div>
+								</div>
+							</div>																										
+				</div>
+			</div>
+		</div>
+		<!-- 우측 전체 박스 -->
+			<div class="s-body-right-box">
+
+			</div>
+				
+			</div>
+		</div>
+	</form>
+
+	<script>
+		$()
+	</script>
+</body>
+</html>
