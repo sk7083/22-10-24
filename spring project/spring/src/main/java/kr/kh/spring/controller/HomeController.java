@@ -94,6 +94,11 @@ public class HomeController {
 	}
 	
 	
+	
+	
+	
+	
+	
 	@RequestMapping(value = "/ex1")
 	public ModelAndView ex1(ModelAndView mv,String name, Integer age) {
 		System.out.println("예제1 - 화면에서 전달한 이름 : " + name);
