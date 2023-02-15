@@ -7,16 +7,20 @@
     <img src="<c:url value='/resources/img/bird.jpg'></c:url>"alt="logo" style="width:40px;">
   </a>
   
-  <!-- Links -->
-  <ul class="navbar-nav">
-    <li class="nav-item">
-      <a class="nav-link" href="<c:url value='/signup'></c:url>">회원가입</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="<c:url value='/login'></c:url>">로그인</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Link 3</a>
-    </li>
-  </ul>
+  	<!-- Links -->
+	  <ul class="navbar-nav">
+	 	 <c:if test = "${user == null}">
+		    <li class="nav-item">
+		      <a class="nav-link" href="<c:url value='/signup'></c:url>">회원가입</a>
+		    </li>
+		    <li class="nav-item">
+		      <a class="nav-link" href="<c:url value='/login'></c:url>">로그인</a>
+		    </li>
+	    </c:if>
+	    <c:if test="${user != null}">
+		    <li class="nav-item">
+		      <a class="nav-link" href="<c:url value='/logout'></c:url>">로그아웃</a>
+		    </li>
+	    </c:if>
+	  </ul>
 </nav>
