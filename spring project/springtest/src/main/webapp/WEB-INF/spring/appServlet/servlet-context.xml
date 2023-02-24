@@ -21,12 +21,9 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="kr.kh.test.*" />
-	
 	<beans:bean id="tilesViewResolver" class="org.springframework.web.servlet.view.UrlBasedViewResolver">
-    <beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
-    <beans:property name="order" value="1" /><!-- 순서를 우선으로 지정 -->
-	
+	    <beans:property name="viewClass" value="org.springframework.web.servlet.view.tiles3.TilesView" />
+	    <beans:property name="order" value="1" /><!-- 순서를 우선으로 지정 -->
 	</beans:bean>
 	     
 	<beans:bean id="tilesConfigurer" class="org.springframework.web.servlet.view.tiles3.TilesConfigurer">
@@ -36,6 +33,23 @@
 	        </beans:list>
 	    </beans:property>
 	</beans:bean>
-		
+	
+	<context:component-scan base-package="kr.kh.test.*" />
+	<!-- 인터셉터 등록 -->
+	<beans:bean id="loginInterceptor" 
+		class="kr.kh.test.interceptor.LoginInterceptor"></beans:bean>
+		<beans:bean id="adminInterceptor" 
+		class="kr.kh.test.interceptor.AdminInterceptor"></beans:bean>
+	<!-- 어느 url에서 인터셉터들이 동작할 건지를 설정 -->
+	<interceptors>
+	    <interceptor>
+	        <mapping path="/login"/>
+	        <beans:ref bean="loginInterceptor"/>
+	    </interceptor>
+	    <interceptor>
+	        <mapping path="/admin/board/type/**"/>
+	        <beans:ref bean="adminInterceptor"/>
+	    </interceptor>
+	</interceptors>	
 	
 </beans:beans>
