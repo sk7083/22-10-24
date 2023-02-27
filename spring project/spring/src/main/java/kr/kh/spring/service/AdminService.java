@@ -13,5 +13,5 @@ public interface AdminService {
 	boolean updateBoardType(BoardTypeVO bt);
 
 	boolean deleteBoardType(int bt_num);
-	
+
 }

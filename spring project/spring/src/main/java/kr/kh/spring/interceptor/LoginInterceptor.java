@@ -10,7 +10,7 @@ import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import kr.kh.spring.vo.MemberVO;
 
-public class LoginInterceptor extends HandlerInterceptorAdapter{
+public class LoginInterceptor extends HandlerInterceptorAdapter  {
 	
 	@Override
 	public void postHandle(
@@ -28,12 +28,3 @@ public class LoginInterceptor extends HandlerInterceptorAdapter{
 	    }
 	}
 }
-
-
-
-
-
-
-
-
-
