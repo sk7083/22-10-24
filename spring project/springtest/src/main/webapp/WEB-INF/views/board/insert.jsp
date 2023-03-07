@@ -44,6 +44,26 @@ $('[name=bo_content]').summernote({
 	tabsize: 2,
 	height: 400
 });
+
+$('form').submit(function(){
+	let type = $('[name=bo_bt_num]').val();
+	if(type == 0){
+		alert('게시판을 선택하세요.');
+		return false;
+	}
+	
+	let title = $('[name=bo_title]').val();
+	if(title.trim().length == 0){
+		alert('제목을 입력하세요.');
+		return false;
+	}
+	let content = $('[name=bo_content]').summernote('code');
+	if(content.trim().length == 0){
+		alert('내용을 입력하세요.');
+		return false;
+	}
+	
+});
 </script>
 </body>
 </html>
