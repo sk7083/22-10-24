@@ -32,7 +32,7 @@
 			      </a>
 			      <div class="dropdown-menu">
 			        <a class="dropdown-item" href="<c:url value='/admin/board/type/list'></c:url>">게시판 관리</a>
-			        <a class="dropdown-item" href="#">Link 2</a>
+			        <a class="dropdown-item" href="<c:url value='/board/insert'></c:url>">게시글 등록</a>
 			        <a class="dropdown-item" href="#">Link 3</a>
 			      </div>
 			    </li>
