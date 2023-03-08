@@ -62,6 +62,13 @@ public class BoardServiceImp implements BoardService{
 		}
 		return true;
 	}
+
+	@Override
+	public ArrayList<BoardVO> getBoardTypeList() {
+		// spring 게시글 조회(복습) - 6번
+		//다오에게 게시글 리스트를 가져오라고 요청한 후 가져온 게시글 리스트를 리턴
+		return boardDao.selectBoardList();
+	}
 	
 	
 }

@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 
+import kr.kh.spring.pagination.Criteria;
+import kr.kh.spring.pagination.PageMaker;
 import kr.kh.test.service.BoardService;
 import kr.kh.test.vo.BoardTypeVO;
 import kr.kh.test.vo.BoardVO;
@@ -49,6 +51,11 @@ public class BoardController {
 	
 	@RequestMapping(value="/board/list", method=RequestMethod.GET)
 	public ModelAndView boardList(ModelAndView mv) {
+		//spring 게시글 조회(복습) 5번
+		ArrayList<BoardVO> list = boardService.getBoardTypeList();
+		mv.addObject("list", list);
+		// 이후에 getBoardTypeList를 BoardService에서 method로 (전구 클릭) 만듬 6번
+		
 		mv.setViewName("/board/list");
 		return mv;
 	}

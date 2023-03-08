@@ -14,4 +14,9 @@ public interface BoardService {
 
 	boolean insertBoard(BoardVO board, MemberVO user, MultipartFile[] files);
 
+	// spring 게시글 조회(복습) - 6번
+	//메소드 추가 및 구현
+	ArrayList<BoardVO> getBoardTypeList();
+	
+
 }
