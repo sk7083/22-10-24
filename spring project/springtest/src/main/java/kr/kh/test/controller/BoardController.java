@@ -46,4 +46,10 @@ public class BoardController {
 		mv.setViewName("/common/message");
 		return mv;
 	}
+	
+	@RequestMapping(value="/board/list", method=RequestMethod.GET)
+	public ModelAndView boardList(ModelAndView mv) {
+		mv.setViewName("/board/list");
+		return mv;
+	}
 }
