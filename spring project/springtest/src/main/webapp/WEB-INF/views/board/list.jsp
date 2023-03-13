@@ -14,10 +14,6 @@
 		</tr>
 	</thead>
 	<tbody>
-	<!-- spring 게시글 조회 (복습) - 8번
-	 서버에서 보낸 게시글 리스트를 <c:forEach>와 <table>를 이용하여 화면에 출력
-	 제목은 <a>를 이용하여 링크를 추가 : /board/detail/게시글번호
-	 -->
 		<c:forEach items="${list}" var="board">
 			<tr>
 				<td>${board.bo_num}</td>
@@ -27,10 +23,41 @@
 					</a>
 				</td>
 				<td>${board.bo_me_id }</td>
-				<td>${board.bo_register_date }</td>
+				<td>${board.bo_register_date_str }</td>
 				<td>${board.bo_up}/${board.bo_down }</td>
 				<td>${board.bo_views}</td>
 			</tr>
 		</c:forEach>
 	</tbody>
 </table>
+<ul class="pagination justify-content-center">
+	<li class="page-item <c:if test="${!pm.prev}"> disabled</c:if>">
+		<a href="<c:url value='/board/list?page=${pm.startPage-1}&search=${pm.cri.search}&type=${pm.cri.type}'></c:url>" class="page-link">이전</a>
+	</li>
+	<c:forEach begin="${pm.startPage}" end="${pm.endPage}" var="i">
+		<li class="page-item <c:if test="${i == pm.cri.page }"> active</c:if>">
+			<a href="<c:url value='/board/list?page=${i}&search=${pm.cri.search}&type=${pm.cri.type}'></c:url>" class="page-link">${i}</a>
+		</li>
+	</c:forEach>
+	<li class="page-item <c:if test="${!pm.next}"> disabled</c:if>">
+		<a href="<c:url value='/board/list?page=${pm.endPage+1}&search=${pm.cri.search}&type=${pm.cri.type}'></c:url>" class="page-link">다음</a>
+	</li>
+</ul>
+<form class="input-group mb-3" action="<c:url value='/board/list'></c:url>">
+	<div class="input-group-prepend">
+		<select class="form-control" name="type">
+			<option value="0">전체</option>
+			<c:forEach items="${btList}" var="bt">
+				<option value="${bt.bt_num}" <c:if test="${bt.bt_num == pm.cri.type}">selected</c:if>>${bt.bt_name}</option>	
+			</c:forEach>
+		</select>
+	</div>
+	<input type="text" class="form-control" placeholder="검색어를 입력하세요." name="search" value="${pm.cri.search}">	
+	<div class="input-group-append">
+		<button class="btn btn-success" type="submit">검색</button>
+	</div>
+</form>
+<c:if test="${user != null }">
+	<a class="btn btn-outline-success" href="<c:url value='/board/insert'></c:url>">글쓰기</a>
+</c:if>
+

@@ -1,9 +1,12 @@
 package kr.kh.test.vo;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@NoArgsConstructor
 public class FileVO {
+
 	int fi_num;
 	String fi_ori_name;
 	String fi_name;

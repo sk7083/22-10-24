@@ -37,12 +37,16 @@ public class BoardController {
 	public ModelAndView boardList(ModelAndView mv, Criteria cri) {
 		//우선 전체 게시글을 가져오는 코드로 작성하고
 		//추후에 페이지네이션 및 검색 기능을 적용
-		cri.setPerPageNum(2);
+		cri.setPerPageNum(2);	//화면에 페이지가 (설정한 숫자) 숫자만큼 나옴 
 		ArrayList<BoardVO> list = boardService.getBoardList(cri);
+		
+		//
 		int totalCount = boardService.getBoardTotalCount(cri);
+		
 		PageMaker pm = new PageMaker(totalCount, 3, cri);
 		ArrayList<BoardTypeVO> typeList = boardService.getBoardType(9);
 		mv.addObject("list",list);
+		//위에서 만든 PageMaker pm 정보를 화면에 전달하기 위해 mv.addObject
 		mv.addObject("pm", pm);
 		mv.addObject("typeList", typeList);
 		mv.setViewName("/board/list");
