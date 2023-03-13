@@ -1,55 +1,47 @@
-package kr.kh.spring.dao;
+package kr.kh.test.dao;
 
 import java.util.ArrayList;
 
 import org.apache.ibatis.annotations.Param;
 
-import kr.kh.spring.pagination.Criteria;
-import kr.kh.spring.vo.BoardTypeVO;
-import kr.kh.spring.vo.BoardVO;
-import kr.kh.spring.vo.FileVO;
-import kr.kh.spring.vo.LikesVO;
+import kr.kh.test.pagination.Criteria;
+import kr.kh.test.vo.BoardTypeVO;
+import kr.kh.test.vo.BoardVO;
+import kr.kh.test.vo.FileVO;
 
 public interface BoardDAO {
 
-	ArrayList<BoardTypeVO> selectAllBoardType(@Param("authority")int authority);
+	ArrayList<BoardTypeVO> selectBoardTypeList(@Param("authority")int adminAuthority);
 
-	boolean insertBoardType(@Param("bt")BoardTypeVO bt);
+	BoardTypeVO selectBoardTypeByName(@Param("bt_name")String bt_name);
 
-	boolean updateBoardType(@Param("bt")BoardTypeVO bt);
+	int insertBoardType(@Param("bt")BoardTypeVO bt);
 
-	boolean deleteBoardType(@Param("bt_num")int bt_num);
+	int updateBoardType(@Param("bt")BoardTypeVO bt);
 
-	void insertBoard(@Param("bo")BoardVO board);
+	boolean deleteBoardType(@Param("bt_num")Integer bt_num);
+
+	int insertBoard(@Param("bo")BoardVO board);
+
+	void insertFile(@Param("file")FileVO fileVo);
 
 	ArrayList<BoardVO> selectBoardList(@Param("cri")Criteria cri);
 
-	void insertFile(@Param("file")FileVO fileVo);
+	int selectTotalCountBoard(@Param("cri")Criteria cri);
+
+	int updateViews(@Param("bo_num")int bo_num);
 
 	BoardVO selectBoard(@Param("bo_num")int bo_num);
 
 	ArrayList<FileVO> selectFileList(@Param("bo_num")int bo_num);
 
-	void updateBoardViews(@Param("bo_num")int bo_num);
-
-	BoardTypeVO selectBoardType(@Param("bt_num")int bo_bt_num);
-
-	LikesVO selectLikesById(@Param("li_me_id")String me_id, @Param("li_bo_num")int bo_num);
-
-	void insertLikes(@Param("li")LikesVO likesVo);
-
-	void updateLikes(@Param("li")LikesVO likesVo);
+	void deleteFile(@Param("fi_num")int fi_num);
 
 	int deleteBoard(@Param("bo_num")int bo_num);
 
-	void deleteFile(@Param("file")FileVO file);
-
-	int updateBoard(@Param("bo")BoardVO board);
+	int updateBoard(@Param("board")BoardVO board);
 
 	FileVO selectFile(@Param("fi_num")int fileNum);
-
-	void updateBoardByLikes(@Param("bo_num")int bo_num);
-
-	int selectBoardTotalCount(@Param("cri")Criteria cri);
+	
 
 }
